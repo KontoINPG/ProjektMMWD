@@ -1,0 +1,6 @@
+S³owny zapis realizacji algorytmu:
+1.Losowy wybór punktów pocz¹tkowych
+2.Porównanie wyników poszczególnych "pszczó³ek"
+3.Wys³anie wiêkszej iloœci pszczó³ w miejsca z wiêksz¹ iloœci¹ po¿ywienia (w lepsze rozwi¹zania)
+4.Porównanie wyników. W przypadku odnalezienia lepszego rozwi¹zania powrót do pkt 3
+5.W przypadku braku zmiany rozwi¹zania od x wylotów z gniazda, zakoñczenie algorytmu
