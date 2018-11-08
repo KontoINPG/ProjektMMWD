@@ -29,7 +29,7 @@ Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent,
 {
         produktId = id;
         id = id+1;
-        std::cout<<"Test, konstruktor, Produkt, id: "<<produktId<<std::endl;
+        //std::cout<<"Test, konstruktor, Produkt, id: "<<produktId<<std::endl;
         nazwa = _nazwa;
         sklep = _sklep;
         producent = _producent;
@@ -80,11 +80,12 @@ int Produkt::id = 0;
 
 int Sklep::id = 0;
 
-Sklep::Sklep()
+Sklep::Sklep(std::string _nazwa)
 {
     sklepId = id;
     id++;
-    std::cout<<"Test, konstruktor, Sklep, id: "<<sklepId<<std::endl;
+    nazwa = _nazwa;
+    //std::cout<<"Test, konstruktor, Sklep, id: "<<sklepId<<std::endl;
 }
 
 void Sklep::dodaj_produkt(int _produktId)
@@ -104,12 +105,20 @@ std::vector<int> Sklep::szukaj_produktow_nazwa( std::string _nazwa)
         }
     }
     return znalezioneId;
+
+}
+
+std::string Sklep::get_nazwa()
+{
+    return nazwa;
 }
 
 int Sklep::get_id()
 {
     return sklepId;
 }
+
+
 
 
 

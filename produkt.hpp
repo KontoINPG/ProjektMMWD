@@ -40,13 +40,15 @@ class Sklep{
 private:
     std::vector<int> listaIdProduktow;//Przechowuje unikatowe ID produktow;
     int sklepId;
+    std::string nazwa;
 
     static int id;
 public:
-    Sklep ();
+    Sklep (std::string _nazwa);
     std::vector<int> szukaj_produktow_nazwa( std::string _nazwa); //Zwroci tablice z unikatowymi ID produktow;
     void dodaj_produkt( int _produktId );
     int get_id();
+    std::string get_nazwa();
 };
 
 
