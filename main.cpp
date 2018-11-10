@@ -14,6 +14,7 @@ using std::endl;
 
 extern std::vector<Produkt> BazaProduktow;
 extern std::vector<Sklep> BazaSklepow;
+extern std::vector<ElementZamawiany> ListaZamowienia;
 
 
 
@@ -42,12 +43,36 @@ for(sklep : BazaSklepow)
 {
     std::vector<int> idZnalezionych;
     idZnalezionych = sklep.szukaj_produktow_nazwa(szukanyElement);
-    for(id:idZnalezionych)
+    if(idZnalezionych[0] != -1)
     {
-        cout<<BazaProduktow[id].get_cena()<<", "<<BazaProduktow[id].get_cena_przesylki_sklep()<<", "<<BazaProduktow[id].get_nazwa()<<", "<<BazaProduktow[id].get_sklep()<<", "<<BazaProduktow[id].get_producent()<<endl;
+        for(id:idZnalezionych)
+        {
+            cout<<BazaProduktow[id].get_cena()<<", "<<BazaProduktow[id].get_cena_przesylki_sklep()<<", "<<BazaProduktow[id].get_nazwa()<<", "<<BazaProduktow[id].get_sklep()<<", "<<BazaProduktow[id].get_producent()<<endl;
+        }
     }
 }
 
+//Dziwne testy------------------------//
+
+wczytajZamowienie();
+okreslDostepnosc();
+
+cout<<"------------------------------------------------------"<<endl;
+cout<<ListaZamowienia[0].get_id()<<endl;
+cout<<ListaZamowienia[1].get_id()<<endl;
+cout<<ListaZamowienia[0].get_id()<<endl;
+
+for(element : ListaZamowienia)
+{
+    cout<<"Element:" <<element.get_nazwa()<<endl;
+    cout<<"Dostepny w sklepach:"<<endl;
+
+    for( sklep : element.get_listaDostawcow())
+    {
+        cout<<BazaSklepow[sklep].get_nazwa()<<endl;
+    }
+    cout<<"-----------------"<<endl<<endl;
+}
 
 
 }//koniec int main();

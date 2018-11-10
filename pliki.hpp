@@ -5,4 +5,6 @@
 
 int wczytajBaze();
 
+int wczytajZamowienie();
+
 #endif // PLIKI_HPP

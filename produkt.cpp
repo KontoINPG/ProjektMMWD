@@ -18,6 +18,13 @@ std::vector <Sklep> BazaSklepow;
 //---------------------------------------------------------------------------------------------------//
 
 
+//---------------------------------------------------------------------------------------------------//
+//Lista Zamowienia
+//---------------------------------------------------------------------------------------------------//
+std::vector <ElementZamawiany> ListaZamowienia;
+//---------------------------------------------------------------------------------------------------//
+
+
 
 
 
@@ -96,15 +103,24 @@ void Sklep::dodaj_produkt(int _produktId)
 std::vector<int> Sklep::szukaj_produktow_nazwa( std::string _nazwa)
 {
     std::vector<int> znalezioneId;
+    bool czyZnaleziono = false;
 
     for(id : listaIdProduktow)
     {
         if(BazaProduktow[id].get_nazwa() == _nazwa)
         {
             znalezioneId.push_back(id);
+            czyZnaleziono = true;
         }
     }
-    return znalezioneId;
+
+    if(czyZnaleziono==false)
+    {
+        znalezioneId.push_back(-1);
+    }
+
+return znalezioneId;
+
 
 }
 
@@ -119,8 +135,74 @@ int Sklep::get_id()
 }
 
 
+//---------------------------------------------------------------------------------------------------//
+//ElementZamawiany
+//---------------------------------------------------------------------------------------------------//
+
+int ElementZamawiany::id = 0;
+
+ElementZamawiany::ElementZamawiany(std::string _nazwa, double _jakosc)
+{
+    elementId = id;
+    id++;
+    nazwa = _nazwa;
+    jakosc = _jakosc;
+}
 
 
+double ElementZamawiany::get_jakosc()
+{
+    return jakosc;
+}
+
+std::string ElementZamawiany::get_nazwa()
+{
+    return nazwa;
+}
+
+std::vector<int> ElementZamawiany::get_listaDostawcow()
+{
+    return listaDostawcow;
+}
+
+void ElementZamawiany::set_listaDostawcow(std::vector<int> _listaDostawcow)
+{
+    listaDostawcow = _listaDostawcow;
+}
+
+int ElementZamawiany::get_id()
+{
+    return elementId;
+}
+
+void ElementZamawiany::dodaj_dostawce(int _id)
+{
+    listaDostawcow.push_back(_id);
+}
+
+
+
+
+void okreslDostepnosc()
+{
+    for(element : ListaZamowienia)
+    {
+       std::string nazwaElementu = element.get_nazwa();
+
+       for(sklep : BazaSklepow)
+       {
+           std::vector<int> idSklepow = sklep.szukaj_produktow_nazwa(nazwaElementu);
+           if(idSklepow[0] != -1)//Czyli, jezeli cos znalazlo;
+           {
+                for(id : idSklepow)
+                {
+                    element.dodaj_dostawce(id);
+                }
+           }
+       }
+
+    }
+}
 
 
 
