@@ -183,5 +183,10 @@ int zapiszZamowienie()
 {
     std::fstream plikWynik;
     plikWynik.open("Wynik.txt", std::ios::out);
+    if(plikWynik.good() == false)
+    {
+        cout<<"Plik do zapisu nie moze byc otwarty..."<<endl;
+        return(-1);
+    }
 	return 0;
 }
