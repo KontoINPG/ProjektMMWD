@@ -174,7 +174,7 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to z
 
 int zapiszZamowienie()
 {
-	
+	return 0;
 }
 
 
