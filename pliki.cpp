@@ -11,7 +11,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 0;
+int wczytajBaze()//zwraca -1, gdy nie uda si� pliku otworzy�. Jak OK, to zwraca 0;
 {
 
     std::fstream plikBazaTowarow;
@@ -43,14 +43,14 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwrac
             std::string token[ilTokenow];
 
 
-            if(liniaProdukt[0]=='$' && liniaProdukt[1] == ';')//Sprawdzanie pocz¹tku linii;
+            if(liniaProdukt[0]=='$' && liniaProdukt[1] == ';')//Sprawdzanie pocz�tku linii;
             {
 
             for(int ltok = 0; ltok<ilTokenow; ltok++)//Rozbijanie linii na tokeny;
             {
                 if(ltok == ilTokenow-1)
                 {
-                    poz2 = liniaProdukt.find_first_of(";#",poz1);//Sprawdzanie koñca linii;
+                    poz2 = liniaProdukt.find_first_of(";#",poz1);//Sprawdzanie ko�ca linii;
                 }else{
                         poz2 = liniaProdukt.find_first_of(";",poz1);
                      }
@@ -104,7 +104,7 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwrac
 
 
 
-int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 0;
+int wczytajZamowienie()//zwraca -1, gdy nie uda si� pliku otworzy�. Jak OK, to zwraca 0;
 {
 
     std::fstream plikBazaTowarow;
@@ -133,14 +133,14 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to
             std::string token[ilTokenow];
 
 
-            if(liniaProdukt[0]=='$' && liniaProdukt[1] == ';')//Sprawdzanie pocz¹tku linii;
+            if(liniaProdukt[0]=='$' && liniaProdukt[1] == ';')//Sprawdzanie pocz�tku linii;
             {
 
             for(int ltok = 0; ltok<ilTokenow; ltok++)//Rozbijanie linii na tokeny;
             {
                 if(ltok == ilTokenow-1)
                 {
-                    poz2 = liniaProdukt.find_first_of(";#",poz1);//Sprawdzanie koñca linii;
+                    poz2 = liniaProdukt.find_first_of(";#",poz1);//Sprawdzanie ko�ca linii;
                 }else{
                         poz2 = liniaProdukt.find_first_of(";",poz1);
                      }
@@ -179,7 +179,7 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to
 
 }
 
-int zapiszZamowienie()  //Funkcja zapisująca dane otrzymane z algorytmu do pliku txt
+int zapiszZamowienie()  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku txt
 {
     std::fstream plikWynik; //Zalaczenie pliku do fuknkcji
     plikWynik.open("Wynik.txt", std::ios::out); //Otwarcie pliku z wynikami
