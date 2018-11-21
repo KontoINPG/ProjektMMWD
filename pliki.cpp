@@ -181,5 +181,7 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to z
 
 int zapiszZamowienie()
 {
+    std::fstream plikWynik;
+    plikWynik.open("Wynik.txt", std::ios::out);
 	return 0;
 }
