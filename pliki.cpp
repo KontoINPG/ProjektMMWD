@@ -188,5 +188,7 @@ int zapiszZamowienie()  //Funkcja zapisująca dane otrzymane z algorytmu do plik
         cout<<"Plik do zapisu nie moze byc otwarty..."<<endl;
         return(-1);
     }
+
+    plikWynik.close();
 	return 0;
 }
