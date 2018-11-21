@@ -172,12 +172,14 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to z
 
     plikBazaTowarow.close();
 
-int zapiszZamowienie()
-{
-	return 0;
-}
+
 
 
     return 0;
 
+}
+
+int zapiszZamowienie()
+{
+	return 0;
 }
