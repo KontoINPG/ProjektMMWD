@@ -189,6 +189,10 @@ int zapiszZamowienie()  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku
         return(-1);
     }
 
+    std::string test;
+    getline( cin, test);
+    plikWynik.write( & test[0],test.length());
+
     plikWynik.close();
 	return 0;
 }
