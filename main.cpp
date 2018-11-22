@@ -77,15 +77,18 @@ for(element : ListaZamowienia)
 
 }//koniec int main();
 
-std::vector< std::string > * losowanie_wektora(int miaraHanninga )
-{
-return 0;
-}
-std::map<std::string, int> tabelaKodowanSklepow;
 
-void algorytm_pszczeli(std::vector<Produkt> listaZakupow)
+
+// http://zsi.ii.us.edu.pl/~mboryczka/IntStad/sr_abc.php
+
+void algorytm_pszczeli()
 {
-    //Losowanie początkowego rozwiązania:
+    //Losowanie początkowych rozwiązań:
+
+    for( element : ElementZamawiany )
+    {
+
+    }
     std::vector<std::string> wektorWyjsciowy;
     int iloscProduktow = listaZakupow.size();
 
