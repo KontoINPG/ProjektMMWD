@@ -73,8 +73,9 @@ int main()
         }
         cout<<"-----------------"<<endl<<endl;
     }
-
-    zapiszZamowienie();
+    std::vector <int> test_wyniku;
+    test_wyniku.push_back(0);
+    zapiszZamowienie(test_wyniku);
 }//koniec int main();
 
 std::vector< std::string > * losowanie_wektora(int miaraHanninga )
