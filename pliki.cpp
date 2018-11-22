@@ -179,7 +179,7 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to z
 
 }
 
-int zapiszZamowienie()  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku txt
+int zapiszZamowienie(std::vector <int> Wynik)  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku txt
 {
     std::fstream plikWynik; //Zalaczenie pliku do fuknkcji
     plikWynik.open("Wynik.txt", std::ios::out); //Otwarcie pliku z wynikami
@@ -189,9 +189,11 @@ int zapiszZamowienie()  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku
         return(-1);
     }
 
-    std::string test;
-    getline( cin, test);
-    plikWynik.write( & test[0],test.length());
+    for (wynik:Wynik)
+    {
+    std::string Nazwa_sklepu = BazaSklepow[wynik].get_nazwa() + "/n";
+    plikWynik.write( Nazwa_sklepu,Nazwa_sklepu.length());
+    }
 
     plikWynik.close();
 	return 0;
