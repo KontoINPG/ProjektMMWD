@@ -191,8 +191,10 @@ int zapiszZamowienie(std::vector <int> Wynik)  //Funkcja zapisujaca dane otrzyma
 
     for (wynik:Wynik)
     {
-    std::string Nazwa_sklepu = BazaSklepow[wynik].get_nazwa() + "/n";
-    plikWynik.write( Nazwa_sklepu,Nazwa_sklepu.length());
+    std::string Nazwa_sklepu;
+    Nazwa_sklepu=BazaSklepow[wynik].get_nazwa();
+    plikWynik << Nazwa_sklepu << endl;
+    //plikWynik.write( Nazwa_sklepu,Nazwa_sklepu.length());
     }
 
     plikWynik.close();
