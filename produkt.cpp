@@ -197,6 +197,11 @@ void okreslDostepnosc()
                 for(id : idSklepow)
                 {
                     element.dodaj_dostawce(id);
+
+                    std::cout<<"OkrDost"<<std::endl;
+                    std::cout<<element.get_nazwa()<<std::endl;
+                    std::cout<<id<<std::endl;
+                    std::cout<<"-------------------------------------"<<std::endl;//################################################-TU JUŻ JEST ŹLE!
                 }
            }
        }

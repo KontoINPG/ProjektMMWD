@@ -3,9 +3,13 @@
 #include<vector>
 #include<sstream>
 
+#include<ctime>
+#include<cstdlib>
+
 
 #include"produkt.hpp"
 #include"pliki.hpp"
+#include"AlgorytmPszczeli.hpp"
 
 using std::cout;
 using std::cin;
@@ -18,8 +22,11 @@ extern std::vector<ElementZamawiany> ListaZamowienia;
 
 
 
+
 int main()
 {
+
+srand(time(NULL));//------------------DAŁEM TO TU, ŻEBY O TYM NIE ZAPOMNIEĆ :) ----------------------;
 
 wczytajBaze();
 
@@ -70,33 +77,23 @@ for(element : ListaZamowienia)
     for( sklep : element.get_listaDostawcow())
     {
         cout<<BazaSklepow[sklep].get_nazwa()<<endl;
+        cout<<sklep<<endl;
     }
     cout<<"-----------------"<<endl<<endl;
 }
 
+algorytm_pszczeli_testy();
+
+cout<<"SKLEPY:"<<endl;
+cout<<BazaSklepow.size()<<endl;
+for(lA:BazaSklepow)
+{
+    cout<<lA.get_id()<<endl;
+}
 
 }//koniec int main();
 
 
-
-// http://zsi.ii.us.edu.pl/~mboryczka/IntStad/sr_abc.php
-
-void algorytm_pszczeli()
-{
-    //Losowanie początkowych rozwiązań:
-
-    for( element : ElementZamawiany )
-    {
-
-    }
-    std::vector<std::string> wektorWyjsciowy;
-    int iloscProduktow = listaZakupow.size();
-
-    for(int lA=0;lA<iloscProduktow;lA++)
-    {
-
-    }
-}
 
 
 
