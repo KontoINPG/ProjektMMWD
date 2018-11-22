@@ -7,5 +7,5 @@ int wczytajBaze();
 
 int wczytajZamowienie();
 
-int zapiszZamowienie();
+int zapiszZamowienie(std::vector <int> Wynik);
 #endif // PLIKI_HPP
