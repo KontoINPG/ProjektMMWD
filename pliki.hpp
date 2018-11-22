@@ -1,6 +1,6 @@
 #ifndef PLIKI_HPP
 #define PLIKI_HPP
-
+#include<vector>
 
 
 int wczytajBaze();
