@@ -1,0 +1,7 @@
+@;AVT;#
+$;BC327;AVT;ST;0.1;15;#
+$;BC327;AVT;NI;0.15;15;#
+@;TME;#
+$;BC337;TME;IR;0.2;17;#
+@;Telmal;#
+$;BC327;Telmal;IR;0.15;10;#
