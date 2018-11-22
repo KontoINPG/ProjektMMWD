@@ -194,15 +194,16 @@ void okreslDostepnosc()
            std::vector<int> idSklepow = sklep.szukaj_produktow_nazwa(nazwaElementu);
            if(idSklepow[0] != -1)//Czyli, jezeli cos znalazlo;
            {
-                for(id : idSklepow)
-                {
-                    element.dodaj_dostawce(id);
 
+                    element.dodaj_dostawce(sklep.get_id());
+
+                    /*
+                    //Wyświetlanie, dla testu;
                     std::cout<<"OkrDost"<<std::endl;
                     std::cout<<element.get_nazwa()<<std::endl;
-                    std::cout<<id<<std::endl;
-                    std::cout<<"-------------------------------------"<<std::endl;//################################################-TU JUŻ JEST ŹLE!
-                }
+                    std::cout<<sklep.get_id()<<std::endl;
+                    std::cout<<"-------------------------------------"<<std::endl;
+                    */
            }
        }
 

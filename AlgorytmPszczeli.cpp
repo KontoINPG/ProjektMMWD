@@ -14,7 +14,7 @@ using std::endl;
 void algorytm_pszczeli_testy()
 {
 
-    //Losowanie pocz¹tkowych rozwi¹zañ:
+    //Losowanie poczÂ¹tkowych rozwiÂ¹zaÃ±:
 
     int ilFurazerek = 5;
     std::vector< std::vector<int>> rozwiazaniePoczatkowe;
@@ -30,20 +30,18 @@ void algorytm_pszczeli_testy()
 
             dostawcy = element.get_listaDostawcow();
             ilDostawcow = dostawcy.size();
-            wylosowanySklepID = dostawcy[rand()%ilDostawcow];//-------------SPRAWDZIÆ, CZY TO JEST DOBRZE-------------//
-            cout<<"WSID: "<<wylosowanySklepID<<endl;
+            wylosowanySklepID = dostawcy[rand()%ilDostawcow];//-------------SPRAWDZIÃ†, CZY TO JEST DOBRZE Z TYM RAND()-------------//
             rozwiazanie.push_back(wylosowanySklepID);
         }
         rozwiazaniePoczatkowe.push_back(rozwiazanie);
-        for(lA:rozwiazanie)
-            cout<<BazaSklepow[lA].get_nazwa();
-        cout<<"------------------"<<endl;
 
+        //WyÅ›wietlanie, dla testu;
+        for(lA:rozwiazanie)
+            cout<<BazaSklepow[lA].get_nazwa()<<", ";
+        cout<<endl;
+        cout<<"------------------"<<endl;
     }
 
-
-
-
-}
+}//void algorytm_pszczeli_testy();
 
 
