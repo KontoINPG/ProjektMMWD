@@ -84,12 +84,6 @@ for(element : ListaZamowienia)
 
 algorytm_pszczeli_testy();
 
-cout<<"SKLEPY:"<<endl;
-cout<<BazaSklepow.size()<<endl;
-for(lA:BazaSklepow)
-{
-    cout<<lA.get_id()<<endl;
-}
 
 }//koniec int main();
 

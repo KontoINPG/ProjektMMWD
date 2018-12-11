@@ -5,3 +5,4 @@ $;BC327;AVT;NI;0.15;15;#
 $;BC337;TME;IR;0.2;17;#
 @;Telmal;#
 $;BC327;Telmal;IR;0.15;10;#
+$;BC337;Telmal;FS;0.20;10;#
