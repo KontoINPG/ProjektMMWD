@@ -9,5 +9,5 @@
 # generated directories
 bin/
 obj/
-
+.vs/
 # End of https://www.gitignore.io/api/codeblocks
