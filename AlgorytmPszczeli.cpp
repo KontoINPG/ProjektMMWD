@@ -14,7 +14,7 @@ using std::endl;
 void algorytm_pszczeli_testy()
 {
 
-    //Losowanie pocz¹tkowych rozwi¹zañ:
+    //Losowanie początkowych rozwi¹zañ:
 
     int ilFurazerek = 5;
     std::vector< std::vector<int>> rozwiazaniePoczatkowe;
@@ -30,7 +30,7 @@ void algorytm_pszczeli_testy()
 
             dostawcy = element.get_listaDostawcow();
             ilDostawcow = dostawcy.size();
-            wylosowanySklepID = dostawcy[rand()%ilDostawcow];//-------------SPRAWDZIÆ, CZY TO JEST DOBRZE Z TYM RAND()-------------//
+            wylosowanySklepID = dostawcy[rand()%ilDostawcow];
             rozwiazanie.push_back(wylosowanySklepID);
         }
         rozwiazaniePoczatkowe.push_back(rozwiazanie);
