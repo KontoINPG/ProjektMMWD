@@ -32,7 +32,7 @@ std::vector <ElementZamawiany> ListaZamowienia;
 //Produkt
 //---------------------------------------------------------------------------------------------------//
 
-Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent, double _cena, double _cenaPrzesylkiSklep )
+Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent, double _cena, double _cenaPrzesylkiSklep, double _jakosc )
 {
         produktId = id;
         id = id+1;
@@ -42,11 +42,13 @@ Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent,
         producent = _producent;
         cena = _cena;
         cenaPrzesylkiSklep = _cenaPrzesylkiSklep;// Cena wysy³ki ze sklepu (ogólnie), na wypadek, gdyby jakiœ przedmiot wymaga³ wiêkszych kosztów. Potem to siê przeliczy, ile przypada na konkretne przedmioty z tego sklepu. (Koszt przesy³ki siê najwiêkszy weŸmie spoœród przedmiotów z danego sklepu).
+		jakosc = _jakosc;
 }
 
 double Produkt::get_cena()
 {
     return cena;
+
 }
 
 double Produkt::get_cena_przesylki_sklep()
@@ -72,6 +74,11 @@ std::string Produkt::get_producent()
 int Produkt::get_id()
 {
     return produktId;
+}
+
+double Produkt::get_jakosc()
+{
+	return jakosc;
 }
 
 
