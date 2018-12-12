@@ -42,6 +42,23 @@ void algorytm_pszczeli_testy()
         cout<<"------------------"<<endl;
     }
 
+
+	while (1)
+	{
+		//sprawdzenie rozwiazan
+
+		//wybranie elity i najlepszych. Zapamietanie najlepszego rozwiazania.
+
+		//zapisanie wyników do pliku
+
+		//sprawdzenie warunku stopu i zakończenie programu ( funkcja celu i/lub ilość iteracji )
+
+		//losowanie otoczeń
+
+		//generowanie kolejnej populcji
+
+
+	}
 }//void algorytm_pszczeli_testy();
 
 
