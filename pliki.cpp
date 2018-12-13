@@ -26,6 +26,7 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 
 
     double cena;
     double cenaPrzesylkiSklep;
+	double jakosc;
     std::string producent;
     std::string nazwa;
     std::string sklep;
@@ -70,7 +71,7 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 
             sklep = token[1];
             nazwa = token[0];
 
-            BazaProduktow.push_back(Produkt(nazwa,sklep,producent,cena,cenaPrzesylkiSklep));
+            BazaProduktow.push_back(Produkt(nazwa,sklep,producent,cena,cenaPrzesylkiSklep,10));
 
             //Przyporzadkowanie produktu do sklepu;
             (BazaSklepow[BazaSklepow.size()-1]).dodaj_produkt(BazaProduktow[(int)(BazaProduktow.size()-1)].get_id());
