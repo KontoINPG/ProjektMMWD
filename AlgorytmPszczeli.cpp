@@ -62,7 +62,7 @@ void algorytm_pszczeli_testy()
 }//void algorytm_pszczeli_testy();
 
 
-int oblicz_funkcje_celu(std::vector<int> _wektorRozwiazan)
+int f_celu(std::vector<int> _wektorRozwiazan)
 {
     int dlugoscWektora = _wektorRozwiazan.size();
     std::vector<int> produktyZamawianeID;
@@ -71,7 +71,8 @@ int oblicz_funkcje_celu(std::vector<int> _wektorRozwiazan)
 
     for(int lA=0; lA<dlugoscWektora; lA++)
     {
-        znalezione = _wektorRozwiazan[lA].szukaj_produktow_nazwa(ListaZamowienia[lA].get_nazwa());
+        znalezione = BazaSklepow[_wektorRozwiazan[lA]].szukaj_produktow_nazwa(ListaZamowienia[lA].get_nazwa());
+
     }
 
 }
