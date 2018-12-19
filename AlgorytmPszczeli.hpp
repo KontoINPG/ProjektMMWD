@@ -1,9 +1,12 @@
 #ifndef ALGORYTM_PSZCZELI
 #define ALGORYTM_PSZCZELI
-#include"produkt.hpp"
 
+#include<string>
+#include<iostream>
+#include<vector>
+#include<map>
 
 void algorytm_pszczeli_testy();
-int f_celu (std::vector <int> roz);
+int oblicz_funkcje_celu(std::vector<int> _wektorRozwiazan);
 
 #endif // ALGORYTM_PSZCZELI

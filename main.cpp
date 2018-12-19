@@ -35,7 +35,7 @@ cout<<"Produkty w bazie:"<<endl;
 
 for (tranzystor : BazaProduktow)
 {
-    cout<<tranzystor.get_cena()<<", "<<tranzystor.get_cena_przesylki_sklep()<<", "<<tranzystor.get_nazwa()<<", "<<tranzystor.get_sklep()<<", "<<tranzystor.get_producent()<<endl;
+    cout<<tranzystor.get_cena()<<", "<<tranzystor.get_cena_przesylki_sklep()<<", "<<tranzystor.get_nazwa()<<", "<<tranzystor.get_sklep()<<", "<<tranzystor.get_producent()<<", "<<tranzystor.get_jakosc()<<endl;
 }
 
 std::string szukanyElement;

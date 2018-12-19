@@ -92,3 +92,18 @@ bool policz_max=1;
 }//void algorytm_pszczeli_testy();
 
 
+int f_celu(std::vector<int> _wektorRozwiazan)
+{
+    int dlugoscWektora = _wektorRozwiazan.size();
+    std::vector<int> produktyZamawianeID;
+
+    std::vector<int> znalezione;
+
+    for(int lA=0; lA<dlugoscWektora; lA++)
+    {
+        znalezione = BazaSklepow[_wektorRozwiazan[lA]].szukaj_produktow_nazwa(ListaZamowienia[lA].get_nazwa());
+
+    }
+
+}
+
