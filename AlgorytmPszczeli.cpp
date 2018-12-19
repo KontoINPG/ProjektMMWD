@@ -11,6 +11,9 @@ using std::endl;
 using std::vector;
 
 // http://zsi.ii.us.edu.pl/~mboryczka/IntStad/sr_abc.php
+int f_celu (vector <int> roz){
+    return 5;
+}           //tymczasowa deklaracja w celu kompilacji
 
 void algorytm_pszczeli_testy()
 {
