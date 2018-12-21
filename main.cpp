@@ -10,6 +10,7 @@
 #include"produkt.hpp"
 #include"pliki.hpp"
 #include"AlgorytmPszczeli.hpp"
+#include"Parametry.hpp"
 
 using std::cout;
 using std::cin;

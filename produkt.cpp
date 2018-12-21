@@ -1,4 +1,7 @@
 #include "produkt.hpp"
+#include "Parametry.hpp"
+
+extern ParametryProgramu ProgParam; //Obiekt zawierajacy wszystkie ustawienia i parametry;
 
 
 //---------------------------------------------------------------------------------------------------//
@@ -23,6 +26,7 @@ std::vector <Sklep> BazaSklepow;
 //---------------------------------------------------------------------------------------------------//
 std::vector <ElementZamawiany> ListaZamowienia;
 //---------------------------------------------------------------------------------------------------//
+
 
 
 

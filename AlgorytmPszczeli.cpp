@@ -1,9 +1,12 @@
 #include"AlgorytmPszczeli.hpp"
 #include"produkt.hpp"
+#include"Parametry.hpp"
 
 extern std::vector<Produkt> BazaProduktow;
 extern std::vector<Sklep> BazaSklepow;
 extern std::vector<ElementZamawiany> ListaZamowienia;
+
+ParametryProgramu ProgParam; //Obiekt zawierajacy wszystkie ustawienia i parametry;
 
 using std::cout;
 using std::cin;
@@ -75,7 +78,7 @@ int f_celu(std::vector<int> _wektorRozwiazan)
 void algorytm_pszczeli_testy()
 {
 
-    //Losowanie poczatkowych rozwiazan:
+    //Wyznaczanie macierzy dostawcow: kazdemu elementowi z listy zamowienia odpowiada wektor z ID potencjalnych dostawcow;
 
     std::vector <std::vector<int>> macierzDostawcow;
 
@@ -86,6 +89,8 @@ void algorytm_pszczeli_testy()
     }
 
 
+    //Losowanie poczatkowych rozwiazan:
+
     std::vector<int> rozwiazaniePomocniczeStartowe;//Tylko do wystartowania losujRozwiazaniaZOtoczenia potrzebne;
 
     for(int lElem=0;lElem<ListaZamowienia.size();lElem++)
@@ -94,7 +99,8 @@ void algorytm_pszczeli_testy()
         }
 
 
-    std::vector<std::vector<int>> rozwiazaniePoczatkowe = losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,5,ListaZamowienia.size(),macierzDostawcow);//losowanie z miarą Hamminga = il. zamawianych elem. => czyli losowanie wszystkich elementów wektora;
+
+    std::vector<std::vector<int>> rozwiazaniePoczatkowe = losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,ProgParam.get_iloscFurazerek(),ListaZamowienia.size(),macierzDostawcow);//losowanie z miarą Hamminga = il. zamawianych elem. => czyli losowanie wszystkich elementów wektora;
 
 
 

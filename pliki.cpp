@@ -1,11 +1,14 @@
 #include"pliki.hpp"
 
 #include"produkt.hpp"
+#include"Parametry.hpp"
+
 #include<fstream>
 
 extern std::vector<Produkt> BazaProduktow;
 extern std::vector<Sklep> BazaSklepow;
 extern std::vector<ElementZamawiany> ListaZamowienia;
+extern ParametryProgramu ProgParam; //Obiekt zawierajacy wszystkie ustawienia i parametry;
 
 using std::cout;
 using std::cin;
