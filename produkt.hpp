@@ -6,7 +6,6 @@
 #include<vector>
 #include<map>
 
-
 class Produkt{
 private:
 
