@@ -16,6 +16,7 @@ private:
     double zadanaJakosc = 5;
     double wspCenaJakosc = 0.5;
     double wspKaraJakosc = 0.5;
+    int ilosc_roz = 10;//+1 rozwiazania elitarne
 
 public:
     int get_iloscFurazerek();
@@ -30,7 +31,8 @@ public:
     double get_wspKaraJakosc();
     void set_wspKaraJakosc(double _wspKaraJakosc);
 
-
+    int get_ilosc_roz();
+    void set_ilosc_roz(int _ilosc_roz);
 
 };
 
