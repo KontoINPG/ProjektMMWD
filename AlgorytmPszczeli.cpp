@@ -103,6 +103,42 @@ double f_celu(std::vector<int> _wektorRozwiazan)
 
 }
 
+
+void elita (std::vector <std::vector <int>> & _najlepsze, std::vector <std::vector <int>> _rozwiazaniePoczatkowe){
+    //wybranie elity i najlepszych. Zapamietanie najlepszego rozwiazania.
+std::vector <int> f_naj;
+int maxi;
+int id_max=0;
+int id;
+bool policz_max=1;
+    for(selekcja:_rozwiazaniePoczatkowe)
+        {
+        maxi=0;     //czyszczenie munimum
+        id=0;
+        if(policz_max==1)
+        {  //jeśli wyłuskanie najgorszego rozwiązania jest nieaktualne, to policz je na nowo
+            for(rozwiazanie:_najlepsze)
+            {
+                f_naj.clear();      //Czyszcze cały wektor
+                f_naj.push_back(f_celu(rozwiazanie));   //wpisanie do wektora wyników funkcji celu najlepszych rozwiązań
+                if(f_celu(rozwiazanie)>maxi)
+                {
+                    maxi=f_celu(rozwiazanie);
+                    id_max=id;  //zapamiętanie pozycji najgorszego rozwiązania
+                }
+                id++;
+            }
+            policz_max=0;
+        }
+        if(f_celu(selekcja)<maxi)
+        {
+            _najlepsze[id_max]=selekcja;
+            policz_max=1;   //trzeba policzyć na nowo funkcję celu rozwiązań najlepszych, w celu uzyskania najgorszego spośród nich
+        }
+    }
+}
+
+
 void algorytm_pszczeli_testy()
 {
 
@@ -134,45 +170,10 @@ void algorytm_pszczeli_testy()
 
 
 
-vector <vector <int>> najlepsze;
-vector <int> f_naj;
-const int ilosc_roz=10; //+1
-int maxi;
-int id_max=0;
-int id;
-bool policz_max=1;
 	while (1)
 	{
 		//sprawdzenie rozwiazan
 
-		//wybranie elity i najlepszych. Zapamietanie najlepszego rozwiazania.
-        for(selekcja:rozwiazaniePoczatkowe)
-            {
-            maxi=0;     //czyszczenie munimum
-            id=0;
-            if(policz_max==1)
-            {  //jeśli wyłuskanie najgorszego rozwiązania jest nieaktualne, to policz je na nowo
-                for(rozwiazanie:najlepsze)
-                {
-                    f_naj.clear();      //Czyszcze cały wektor
-                    f_naj.push_back(5/*f_celu(rozwiazanie)*/);   //wpisanie do wektora wyników funkcji celu najlepszych rozwiązań
-                    if(f_celu(rozwiazanie)>maxi)
-                    {
-                        maxi=f_celu(rozwiazanie);
-                        id_max=id;  //zapamiętanie pozycji najgorszego rozwiązania
-                    }
-                    id++;
-                }
-                policz_max=0;
-            }
-            if(f_celu(selekcja)<maxi)
-            {
-                najlepsze[id_max]=selekcja;
-                policz_max=1;   //trzeba policzyć na nowo funkcję celu rozwiązań najlepszych, w celu uzyskania najgorszego spośród nich
-            }
-
-        }
-	}
 		//zapisanie wyników do pliku
 
 		//sprawdzenie warunku stopu i zakończenie programu ( funkcja celu i/lub ilość iteracji )
@@ -182,7 +183,7 @@ bool policz_max=1;
 		//generowanie kolejnej populcji
 
 
-	//}
+	}
 
 
 }//void algorytm_pszczeli_testy();
