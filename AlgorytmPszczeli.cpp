@@ -11,7 +11,6 @@ ParametryProgramu ProgParam; //Obiekt zawierajacy wszystkie ustawienia i paramet
 using std::cout;
 using std::cin;
 using std::endl;
-using std::vector;
 
 // http://zsi.ii.us.edu.pl/~mboryczka/IntStad/sr_abc.php
 
