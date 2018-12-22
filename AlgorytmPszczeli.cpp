@@ -59,19 +59,48 @@ std::vector<std::vector<int>> losujRozwiazaniaZOtoczenia(std::vector<int> _rozwi
 
 }
 
-int f_celu(std::vector<int> _wektorRozwiazan)
+double f_celu(std::vector<int> _wektorRozwiazan)
 {
     int dlugoscWektora = _wektorRozwiazan.size();
     std::vector<int> produktyZamawianeID;
 
     std::vector<int> znalezione;
 
+    double cenaProduktow = 0;
+    double cenaPrzesylek = 0;
+    double cenaJakosc = 0;
+    double cenaRozwiazania = 0;
+
+    double przesylka = 0;
+    std::map<int,double> przesylkiSklepy;
+
     for(int lA=0; lA<dlugoscWektora; lA++)
     {
         znalezione = BazaSklepow[_wektorRozwiazan[lA]].szukaj_produktow_nazwa(ListaZamowienia[lA].get_nazwa());
+        cenaProduktow += BazaProduktow[znalezione[0]].get_cena();
 
+        przesylka = BazaProduktow[znalezione[0]].get_cena_przesylki_sklep();
+
+        if(przesylka>przesylkiSklepy[_wektorRozwiazan[lA]])
+        {
+            przesylkiSklepy[_wektorRozwiazan[lA]] = przesylka;
+        }
+
+        if(ListaZamowienia[lA].get_jakosc() > BazaProduktow[znalezione[0]].get_jakosc())
+        {
+            cenaJakosc = (ListaZamowienia[lA].get_jakosc() - BazaProduktow[znalezione[0]].get_jakosc()) * ProgParam.get_wspKaraJakosc();
+        }
     }
-    return 5;//Tymczasowo, co by sie kompilowalo;
+
+    for(sklepID : _wektorRozwiazan)
+    {
+        cenaPrzesylek += przesylkiSklepy[sklepID];
+    }
+
+    cenaRozwiazania = ProgParam.get_wspCenaJakosc() * (cenaProduktow + cenaPrzesylek) + (1 - ProgParam.get_wspCenaJakosc()) * cenaJakosc;
+
+
+    return cenaRozwiazania;
 
 }
 
@@ -102,6 +131,7 @@ void algorytm_pszczeli_testy()
 
     std::vector<std::vector<int>> rozwiazaniePoczatkowe = losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,ProgParam.get_iloscFurazerek(),ListaZamowienia.size(),macierzDostawcow);//losowanie z miarą Hamminga = il. zamawianych elem. => czyli losowanie wszystkich elementów wektora;
 
+    cout<<"TEST FUNKCJI CELU: "<<f_celu(rozwiazaniePoczatkowe[0])<<endl;
 
 
 

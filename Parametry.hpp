@@ -15,6 +15,7 @@ private:
     int iloscFurazerek = 5;
     double zadanaJakosc = 5;
     double wspCenaJakosc = 0.5;
+    double wspKaraJakosc = 0.5;
 
 public:
     int get_iloscFurazerek();
@@ -25,6 +26,9 @@ public:
 
     double get_wspCenaJakosc();
     void set_wspCenaJakosc(double _wspCenaJakosc);
+
+    double get_wspKaraJakosc();
+    void set_wspKaraJakosc(double _wspKaraJakosc);
 
 
 
