@@ -73,9 +73,16 @@ int main()
         }
         cout<<"-----------------"<<endl<<endl;
     }
+    //testowe wywołania
+    std::vector <int> parametry;
+    parametry.push_back(0);
+    parametry.push_back(1);
+    parametry.push_back(2);
+    parametry.push_back(3);
+    nowyPlik("Nowy_wynik", parametry);
     std::vector <int> test_wyniku;
     test_wyniku.push_back(0);
-    zapiszZamowienie(test_wyniku,"Wynik");
+    zapiszZamowienie(test_wyniku,"Nowy_wynik");
 }//koniec int main();
 
 std::vector< std::string > * losowanie_wektora(int miaraHanninga )
