@@ -200,3 +200,14 @@ int zapiszZamowienie(std::vector <int> Wynik, std::string plik_nazwa)  //Funkcja
     plikWynik.close();
 	return 0;
 }
+
+int nowyPlik(std::string plik_nazwa, std::vector <int> _parametry)
+{
+    std::ofstream plik (plik_nazwa + ".txt");
+    plik << "Zadana jakosc = " << _parametry[0] << endl;
+    plik << "Wsp. cena jakosc = " << _parametry[1] << endl;
+    plik << "Wsp. kara jakosc = " << _parametry[2] << endl;
+    plik << "Ilosc rozwiazan = " << _parametry[3] << endl;
+    plik << "Populacje eksperymentu:" << endl;
+}
+
