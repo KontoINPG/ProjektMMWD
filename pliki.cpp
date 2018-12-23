@@ -179,10 +179,10 @@ int wczytajZamowienie()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to z
 
 }
 
-int zapiszZamowienie(std::vector <int> Wynik)  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku txt
+int zapiszZamowienie(std::vector <int> Wynik, std::string plik_nazwa)  //Funkcja zapisujaca dane otrzymane z algorytmu do pliku txt
 {
     std::fstream plikWynik; //Zalaczenie pliku do fuknkcji
-    plikWynik.open("Wynik.txt", std::ios::out); //Otwarcie pliku z wynikami
+    plikWynik.open(plik_nazwa + ".txt", std::ios::app); //Otwarcie pliku z wynikami
     if(plikWynik.good() == false)   //Sprawdzenie czy plik zostal poprawnie otwarty
     {
         cout<<"Plik do zapisu nie moze byc otwarty..."<<endl;
