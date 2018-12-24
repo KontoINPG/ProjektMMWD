@@ -3,9 +3,14 @@
 #include<vector>
 #include<sstream>
 
+#include<ctime>
+#include<cstdlib>
+
 
 #include"produkt.hpp"
 #include"pliki.hpp"
+#include"AlgorytmPszczeli.hpp"
+#include"Parametry.hpp"
 
 using std::cout;
 using std::cin;
@@ -18,18 +23,32 @@ extern std::vector<ElementZamawiany> ListaZamowienia;
 
 
 
+
 int main()
 {
 
+<<<<<<< HEAD
     wczytajBaze();
+=======
+srand(time(NULL));//------------------DAŁEM TO TU, ŻEBY O TYM NIE ZAPOMNIEĆ :) ----------------------;
+
+wczytajBaze();
+>>>>>>> testy
 
 
     cout<<"Produkty w bazie:"<<endl;
 
+<<<<<<< HEAD
     for (tranzystor : BazaProduktow)
     {
         cout<<tranzystor.get_cena()<<", "<<tranzystor.get_cena_przesylki_sklep()<<", "<<tranzystor.get_nazwa()<<", "<<tranzystor.get_sklep()<<", "<<tranzystor.get_producent()<<endl;
     }
+=======
+for (tranzystor : BazaProduktow)
+{
+    cout<<tranzystor.get_cena()<<", "<<tranzystor.get_cena_przesylki_sklep()<<", "<<tranzystor.get_nazwa()<<", "<<tranzystor.get_sklep()<<", "<<tranzystor.get_producent()<<", "<<tranzystor.get_jakosc()<<endl;
+}
+>>>>>>> testy
 
     std::string szukanyElement;
     szukanyElement = "BC327";
@@ -64,6 +83,7 @@ int main()
 
     for(element : ListaZamowienia)
     {
+<<<<<<< HEAD
         cout<<"Element:" <<element.get_nazwa()<<endl;
         cout<<"Dostepny w sklepach:"<<endl;
 
@@ -91,17 +111,19 @@ return 0;
 }
 std::map<std::string, int> tabelaKodowanSklepow;
 
-void algorytm_pszczeli(std::vector<Produkt> listaZakupow)
-{
-    //Losowanie początkowego rozwiązania:
-    std::vector<std::string> wektorWyjsciowy;
-    int iloscProduktow = listaZakupow.size();
-
-    for(int lA=0;lA<iloscProduktow;lA++)
-    {
-
+        cout<<BazaSklepow[sklep].get_nazwa()<<endl;
+        cout<<sklep<<endl;
     }
+    cout<<"-----------------"<<endl<<endl;
 }
+
+algorytm_pszczeli_testy();
+
+
+
+}//koniec int main();
+
+
 
 
 

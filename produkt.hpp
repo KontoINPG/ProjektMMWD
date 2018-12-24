@@ -6,7 +6,6 @@
 #include<vector>
 #include<map>
 
-
 class Produkt{
 private:
 
@@ -16,6 +15,7 @@ private:
     std::string nazwa;
     std::string sklep;
     int produktId;
+	double jakosc;
 
 
     static int id;
@@ -23,10 +23,11 @@ private:
 
 public:
 
-    Produkt(std::string _nazwa, std::string _sklep, std::string _producent, double _cena, double _cenaPrzesylkiSklep );
+    Produkt(std::string _nazwa, std::string _sklep, std::string _producent, double _cena, double _cenaPrzesylkiSklep, double _jakosc );
     //Produkt(){}
     double get_cena();
     double get_cena_przesylki_sklep();
+	double get_jakosc();
     std::string get_producent();
     std::string get_sklep();
     std::string get_nazwa();

@@ -1,4 +1,7 @@
 #include "produkt.hpp"
+#include "Parametry.hpp"
+
+extern ParametryProgramu ProgParam; //Obiekt zawierajacy wszystkie ustawienia i parametry;
 
 
 //---------------------------------------------------------------------------------------------------//
@@ -28,11 +31,12 @@ std::vector <ElementZamawiany> ListaZamowienia;
 
 
 
+
 //---------------------------------------------------------------------------------------------------//
 //Produkt
 //---------------------------------------------------------------------------------------------------//
 
-Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent, double _cena, double _cenaPrzesylkiSklep )
+Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent, double _cena, double _cenaPrzesylkiSklep, double _jakosc )
 {
         produktId = id;
         id = id+1;
@@ -42,11 +46,13 @@ Produkt::Produkt(std::string _nazwa, std::string _sklep, std::string _producent,
         producent = _producent;
         cena = _cena;
         cenaPrzesylkiSklep = _cenaPrzesylkiSklep;// Cena wysy³ki ze sklepu (ogólnie), na wypadek, gdyby jakiœ przedmiot wymaga³ wiêkszych kosztów. Potem to siê przeliczy, ile przypada na konkretne przedmioty z tego sklepu. (Koszt przesy³ki siê najwiêkszy weŸmie spoœród przedmiotów z danego sklepu).
+		jakosc = _jakosc;
 }
 
 double Produkt::get_cena()
 {
     return cena;
+
 }
 
 double Produkt::get_cena_przesylki_sklep()
@@ -72,6 +78,11 @@ std::string Produkt::get_producent()
 int Produkt::get_id()
 {
     return produktId;
+}
+
+double Produkt::get_jakosc()
+{
+	return jakosc;
 }
 
 
@@ -194,10 +205,16 @@ void okreslDostepnosc()
            std::vector<int> idSklepow = sklep.szukaj_produktow_nazwa(nazwaElementu);
            if(idSklepow[0] != -1)//Czyli, jezeli cos znalazlo;
            {
-                for(id : idSklepow)
-                {
-                    element.dodaj_dostawce(id);
-                }
+
+                    element.dodaj_dostawce(sklep.get_id());
+
+                    /*
+                    //Wyświetlanie, dla testu;
+                    std::cout<<"OkrDost"<<std::endl;
+                    std::cout<<element.get_nazwa()<<std::endl;
+                    std::cout<<sklep.get_id()<<std::endl;
+                    std::cout<<"-------------------------------------"<<std::endl;
+                    */
            }
        }
 

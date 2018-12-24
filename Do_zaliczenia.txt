@@ -1,0 +1,8 @@
+Prezentacja zawieraj¹ca:
+	Model matematyczny(wzorki)	1/2-1 str
+	Opis alorytmu(schemat, procedura)	2-3 str
+		elementy dopasowane do problemu(wskazaæ)
+	Metodyka testów {	opis(specyfika) zadañ + rozwi¹zanie referencyjne(optymalne które wysz³o w n próbach; 
+						scenariusze testowe(co mo¿na badaæ; cel; wyniki(tabela zbiorcza; wykres typowy))
+						wnioski}	2 str + 5 str
+	oprogramowanie/aplikacja (wymagania; format)	1str
