@@ -82,12 +82,7 @@ for(element : ListaZamowienia)
     cout<<"-----------------"<<endl<<endl;
 }
 
-        for( sklep : element.get_listaDostawcow())
-        {
-            cout<<BazaSklepow[sklep].get_nazwa()<<endl;
-        }
-        cout<<"-----------------"<<endl<<endl;
-    }
+
     //testowe wywołania
     std::vector <int> parametry;
     parametry.push_back(0);
