@@ -1,11 +1,14 @@
 #include"pliki.hpp"
 
 #include"produkt.hpp"
+#include"Parametry.hpp"
+
 #include<fstream>
 
 extern std::vector<Produkt> BazaProduktow;
 extern std::vector<Sklep> BazaSklepow;
 extern std::vector<ElementZamawiany> ListaZamowienia;
+extern ParametryProgramu ProgParam; //Obiekt zawierajacy wszystkie ustawienia i parametry;
 
 using std::cout;
 using std::cin;
@@ -26,6 +29,7 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 
 
     double cena;
     double cenaPrzesylkiSklep;
+	double jakosc;
     std::string producent;
     std::string nazwa;
     std::string sklep;
@@ -38,7 +42,7 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 
         //Dekodowanie danych z linii//
             int poz1 = 2;
             int poz2 = 2;
-            const int ilTokenow = 5;
+            const int ilTokenow = 6;
 
             std::string token[ilTokenow];
 
@@ -69,8 +73,9 @@ int wczytajBaze()//zwraca -1, gdy nie uda siê pliku otworzyæ. Jak OK, to zwraca 
             producent = token[2];
             sklep = token[1];
             nazwa = token[0];
+            jakosc = std::stod(token[5]);
 
-            BazaProduktow.push_back(Produkt(nazwa,sklep,producent,cena,cenaPrzesylkiSklep));
+            BazaProduktow.push_back(Produkt(nazwa,sklep,producent,cena,cenaPrzesylkiSklep,jakosc));
 
             //Przyporzadkowanie produktu do sklepu;
             (BazaSklepow[BazaSklepow.size()-1]).dodaj_produkt(BazaProduktow[(int)(BazaProduktow.size()-1)].get_id());
