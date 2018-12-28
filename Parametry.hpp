@@ -12,15 +12,56 @@
 
 class ParametryProgramu{
 private:
-    int iloscFurazerek = 5;
+    int iloscFurazerek = 50;
     double zadanaJakosc = 5;
     double wspCenaJakosc = 0.5;
     double wspKaraJakosc = 0.5;
     int ilosc_roz = 10;//+1 rozwiazania elitarne
 
+    int iloscElita = 4; //Suma ma dawac iloscFurazerek;
+    int iloscNajlepsze = 44;
+    int iloscZwiadowcy = 2;
+
+    int otoczenieElitaIlosc = 5;
+    int otoczenieNajlepszeIlosc = 3;
+    int otoczenieZwiadowcyIlosc = 2;
+
+    int otoczenieElitaHamming = 3;
+    int otoczenieNajlepszeHamming = 4;
+    int otoczenieZwiadowcyHamming = 5;
+
+    bool rodziceWPopulacji = true;
+
 public:
     int get_iloscFurazerek();
     void set_iloscFurazerek(int _iloscFurazerek);
+
+    int get_iloscElita();
+    void set_iloscElita(int _iloscElita);
+
+    int get_iloscNajlepsze();
+    void set_iloscNajlepsze(int _iloscNajlepsze);
+
+    int get_iloscZwiadowcy();
+    void set_iloscZwiadowcy(int _iloscZwiadowcy);
+
+    int get_otoczenieElitaIlosc();
+    void set_otoczenieElitaIlosc(int _otoczenieElitaIlosc);
+
+    int get_otoczenieNajlepszeIlosc();
+    void set_otoczenieNajlepszeIlosc(int _otoczenieNajlepszeIlosc);
+
+    int get_otoczenieZwiadowcyIlosc();
+    void set_otoczenieZwiadowcyIlosc(int _otoczenieZwiadowcyIlosc);
+
+    int get_otoczenieElitaHamming();
+    void set_otoczenieElitaHamming(int _otoczenieElitaHamming);
+
+    int get_otoczenieNajlepszeHamming();
+    void set_otoczenieNajlepszeHamming(int _otoczenieNajlepszeHamming);
+
+    int get_otoczenieZwiadowcyHamming();
+    void set_otoczenieZwiadowcyHamming(int _otoczenieZwiadowcyHamming);
 
     double get_zadanaJakosc();
     void set_zadanaJakosc(double _zadanaJakosc);
@@ -33,6 +74,9 @@ public:
 
     int get_ilosc_roz();
     void set_ilosc_roz(int _ilosc_roz);
+
+    bool get_rodziceWPopulacji();
+    void set_rodziceWPopulacji(bool _rodziceWPopulacji);
 
 };
 

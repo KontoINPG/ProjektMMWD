@@ -95,23 +95,4 @@ for(element : ListaZamowienia)
     zapiszZamowienie(test_wyniku,"Nowy_wynik");
 }//koniec int main();
 
-std::vector< std::string > * losowanie_wektora(int miaraHanninga )
-{
-return 0;
-}
-std::map<std::string, int> tabelaKodowanSklepow;
-
-void algorytm_pszczeli(std::vector<Produkt> listaZakupow)
-{
-    //Losowanie początkowego rozwiązania:
-    std::vector<std::string> wektorWyjsciowy;
-    int iloscProduktow = listaZakupow.size();
-
-    for(int lA=0;lA<iloscProduktow;lA++)
-    {
-
-    }
-}
-
-
 

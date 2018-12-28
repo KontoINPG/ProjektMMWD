@@ -2,6 +2,8 @@
 #include"produkt.hpp"
 #include"Parametry.hpp"
 
+#include<limits>
+
 extern std::vector<Produkt> BazaProduktow;
 extern std::vector<Sklep> BazaSklepow;
 extern std::vector<ElementZamawiany> ListaZamowienia;
@@ -169,18 +171,109 @@ void algorytm_pszczeli_testy()
     cout<<"TEST FUNKCJI CELU: "<<f_celu(rozwiazaniePoczatkowe[0])<<endl;
 
 
+    std::vector<std::vector<int>> populacja;
+
+    populacja = rozwiazaniePoczatkowe;
+
+    std::vector<std::vector<int>> populacjaRozszerzona;
+
+    std::vector<double> cenyRozwiazan;
+
+    int ilEl_Naj = (ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze());
 
 	while (1)
 	{
-		//sprawdzenie rozwiazan
 
-		//zapisanie wyników do pliku
 
-		//sprawdzenie warunku stopu i zakończenie programu ( funkcja celu i/lub ilość iteracji )
 
-		//losowanie otoczeń
+		//losowanie otoczeń-----------------------------//
 
-		//generowanie kolejnej populcji
+
+		//TERAZ NIE MA RODZICOW W ROZWIAZANIACH!!!// <- JUŻ SĄ :)
+
+		for(int lElitaPop = 0; lElitaPop< ProgParam.get_iloscElita(); lElitaPop++)
+        {
+
+            for( int lElita = 0; lElita < ProgParam.get_otoczenieElitaIlosc(); lElita++)
+            {
+                populacjaRozszerzona.push_back(losujRozwiazaniaZOtoczenia(populacja[lElitaPop],1,ProgParam.get_otoczenieElitaHamming(),macierzDostawcow)[0]);
+            }
+
+            if(ProgParam.get_rodziceWPopulacji() == true)
+            {
+                populacjaRozszerzona.push_back(populacja[lElitaPop]);
+            }
+        }
+
+        for(int lNajlepszePop = 0; lNajlepszePop< ProgParam.get_iloscNajlepsze(); lNajlepszePop++)
+        {
+
+            for( int lNajlepsze = 0; lNajlepsze < ProgParam.get_otoczenieNajlepszeIlosc(); lNajlepsze++)
+            {
+                populacjaRozszerzona.push_back(losujRozwiazaniaZOtoczenia(populacja[ProgParam.get_iloscElita()+lNajlepszePop],1,ProgParam.get_otoczenieNajlepszeHamming(),macierzDostawcow)[0]);
+            }
+            if(ProgParam.get_rodziceWPopulacji() == true)
+            {
+                populacjaRozszerzona.push_back(populacja[ProgParam.get_iloscElita()+lNajlepszePop]);
+            }
+        }
+
+        for(int lZwiadowcyPop = 0; lZwiadowcyPop< ProgParam.get_iloscZwiadowcy(); lZwiadowcyPop++)
+        {
+
+            for( int lZwiadowcy = 0; lZwiadowcy < ProgParam.get_otoczenieNajlepszeIlosc(); lZwiadowcy++)
+            {
+                populacjaRozszerzona.push_back(losujRozwiazaniaZOtoczenia(populacja[ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+lZwiadowcyPop],1,ProgParam.get_otoczenieNajlepszeHamming(),macierzDostawcow)[0]);
+            }
+            if(ProgParam.get_rodziceWPopulacji() == true)
+            {
+                populacjaRozszerzona.push_back(populacja[ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+lZwiadowcyPop]);
+            }
+        }
+
+		//sprawdzanie rozwiązań i generowanie kolejnej populcji-----------------------------//
+
+		double cenaNajlepsza = std::numeric_limits<double>::infinity();
+		int cenaNajlepszaIt = 0;
+
+        //Obliczanie funkcji celu dla calej rozszerzonej populacji;
+		for(rozwiazanie : populacjaRozszerzona)
+        {
+            cenyRozwiazan.push_back(f_celu(rozwiazanie));
+        }
+
+        //Wyszukiwanie Elity i Najlepszych;
+        for(int lPop = 0;lPop<ilEl_Naj;lPop++)
+        {
+            for(int cenaIt = 0; cenaIt < cenyRozwiazan.size(); cenaIt++)
+            {
+                if(cenyRozwiazan[cenaIt] < cenaNajlepsza)
+                {
+                    cenaNajlepsza = cenyRozwiazan[cenaIt];
+                    cenaNajlepszaIt = cenaIt;
+                }
+            }
+            cenyRozwiazan[cenaNajlepszaIt] = std::numeric_limits<double>::infinity();
+            populacja[lPop] = populacjaRozszerzona[cenaNajlepszaIt];
+
+        }
+
+        //Dolosowywanie Zwiadowcow;
+        for(int lZwiad = ilEl_Naj;lZwiad<(ilEl_Naj+ProgParam.get_iloscZwiadowcy());lZwiad++)
+        {
+            populacja[lZwiad]=losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,1,ListaZamowienia.size(),macierzDostawcow)[0];
+        }
+
+        populacjaRozszerzona.clear(); //Kasowanie przed kolejna iteracja;
+
+
+
+
+		//zapisanie wyników do pliku--------------------------------------------------------//
+
+		//sprawdzenie warunku stopu i zakończenie programu ( funkcja celu i/lub ilość iteracji )-----------------------//
+
+
 
 
 	}
