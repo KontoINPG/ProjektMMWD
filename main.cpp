@@ -93,6 +93,10 @@ for(element : ListaZamowienia)
     std::vector <int> test_wyniku;
     test_wyniku.push_back(0);
     zapiszZamowienie(test_wyniku,"Nowy_wynik");
+
+    std::vector<int> rozwiazania = algorytm_pszczeli();
+
+    return 0;
 }//koniec int main();
 
 

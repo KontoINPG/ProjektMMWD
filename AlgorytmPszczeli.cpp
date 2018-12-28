@@ -20,6 +20,10 @@ using std::endl;
 std::vector<std::vector<int>> losujRozwiazaniaZOtoczenia(std::vector<int> _rozwiazanieBazowe, int _iloscGenerowanychRozwiazan, int _miaraHamminga, std::vector<std::vector<int>> _macierzDostawcow)
 {
     int dlugoscRozwiazania = _rozwiazanieBazowe.size();
+    if (dlugoscRozwiazania == 0)
+    {
+        cout<<"BLAD: dlugoscRozwiazania = 0"<<endl;
+    }
     std::vector<int> rozwiazanieWyjsciowe = _rozwiazanieBazowe;
 
     std::vector<std::vector<int>> wektorWylosowanychRozwiazan;
@@ -45,16 +49,21 @@ std::vector<std::vector<int>> losujRozwiazaniaZOtoczenia(std::vector<int> _rozwi
 
         dostawcy = _macierzDostawcow[wylosowanaPozycja];
         ilDostawcow = dostawcy.size();
+
+        if (ilDostawcow == 0)
+    {
+        cout<<"BLAD: ilDostawcow = 0"<<endl;
+    }
         rozwiazanieWyjsciowe[wylosowanaPozycja] = dostawcy[rand()%ilDostawcow];
 
     }
 
     wektorWylosowanychRozwiazan.push_back(rozwiazanieWyjsciowe);
      //Wyswietlanie, dla testu;
-        for(lA:rozwiazanieWyjsciowe)
+       /* for(lA:rozwiazanieWyjsciowe)
             cout<<BazaSklepow[lA].get_nazwa()<<", ";
         cout<<endl;
-        cout<<"------------------"<<endl;
+        cout<<"------------------"<<endl;*/
     }
     return wektorWylosowanychRozwiazan;
 
@@ -141,7 +150,7 @@ bool policz_max=1;
 }
 
 
-void algorytm_pszczeli_testy()
+std::vector<int> algorytm_pszczeli()
 {
 
     //Wyznaczanie macierzy dostawcow: kazdemu elementowi z listy zamowienia odpowiada wektor z ID potencjalnych dostawcow;
@@ -168,7 +177,7 @@ void algorytm_pszczeli_testy()
 
     std::vector<std::vector<int>> rozwiazaniePoczatkowe = losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,ProgParam.get_iloscFurazerek(),ListaZamowienia.size(),macierzDostawcow);//losowanie z miarą Hamminga = il. zamawianych elem. => czyli losowanie wszystkich elementów wektora;
 
-    cout<<"TEST FUNKCJI CELU: "<<f_celu(rozwiazaniePoczatkowe[0])<<endl;
+    //cout<<"TEST FUNKCJI CELU: "<<f_celu(rozwiazaniePoczatkowe[0])<<endl;
 
 
     std::vector<std::vector<int>> populacja;
@@ -180,6 +189,8 @@ void algorytm_pszczeli_testy()
     std::vector<double> cenyRozwiazan;
 
     int ilEl_Naj = (ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze());
+
+    int licznikIteracjiAlgorytmu = 1;
 
 	while (1)
 	{
@@ -221,9 +232,9 @@ void algorytm_pszczeli_testy()
         for(int lZwiadowcyPop = 0; lZwiadowcyPop< ProgParam.get_iloscZwiadowcy(); lZwiadowcyPop++)
         {
 
-            for( int lZwiadowcy = 0; lZwiadowcy < ProgParam.get_otoczenieNajlepszeIlosc(); lZwiadowcy++)
+            for( int lZwiadowcy = 0; lZwiadowcy < ProgParam.get_otoczenieZwiadowcyIlosc(); lZwiadowcy++)
             {
-                populacjaRozszerzona.push_back(losujRozwiazaniaZOtoczenia(populacja[ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+lZwiadowcyPop],1,ProgParam.get_otoczenieNajlepszeHamming(),macierzDostawcow)[0]);
+                populacjaRozszerzona.push_back(losujRozwiazaniaZOtoczenia(populacja[ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+lZwiadowcyPop],1,ProgParam.get_otoczenieZwiadowcyHamming(),macierzDostawcow)[0]);
             }
             if(ProgParam.get_rodziceWPopulacji() == true)
             {
@@ -232,6 +243,8 @@ void algorytm_pszczeli_testy()
         }
 
 		//sprawdzanie rozwiązań i generowanie kolejnej populcji-----------------------------//
+
+		populacja.clear();//Kasowanie populacji przed tworzenem nowej;
 
 		double cenaNajlepsza = std::numeric_limits<double>::infinity();
 		int cenaNajlepszaIt = 0;
@@ -245,33 +258,55 @@ void algorytm_pszczeli_testy()
         //Wyszukiwanie Elity i Najlepszych;
         for(int lPop = 0;lPop<ilEl_Naj;lPop++)
         {
+
+            cenaNajlepsza = std::numeric_limits<double>::infinity();
+
             for(int cenaIt = 0; cenaIt < cenyRozwiazan.size(); cenaIt++)
             {
-                if(cenyRozwiazan[cenaIt] < cenaNajlepsza)
+                if(cenyRozwiazan[cenaIt] <= cenaNajlepsza)
                 {
                     cenaNajlepsza = cenyRozwiazan[cenaIt];
                     cenaNajlepszaIt = cenaIt;
                 }
             }
             cenyRozwiazan[cenaNajlepszaIt] = std::numeric_limits<double>::infinity();
-            populacja[lPop] = populacjaRozszerzona[cenaNajlepszaIt];
+            populacja.push_back(populacjaRozszerzona[cenaNajlepszaIt]);
 
         }
 
         //Dolosowywanie Zwiadowcow;
-        for(int lZwiad = ilEl_Naj;lZwiad<(ilEl_Naj+ProgParam.get_iloscZwiadowcy());lZwiad++)
+        for(int lZwiad = 0;lZwiad<ProgParam.get_iloscZwiadowcy();lZwiad++)
         {
-            populacja[lZwiad]=losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,1,ListaZamowienia.size(),macierzDostawcow)[0];
+            populacja.push_back(losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,1,ListaZamowienia.size(),macierzDostawcow)[0]);
         }
 
         populacjaRozszerzona.clear(); //Kasowanie przed kolejna iteracja;
+        cenyRozwiazan.clear();
 
 
 
 
-		//zapisanie wyników do pliku--------------------------------------------------------//
+        //zapisanie wyników do pliku--------------------------------------------------------//
+        cout<<"Iteracja: "<<licznikIteracjiAlgorytmu<<", f_celu: "<<cenaNajlepsza<<endl;
+
+
+
+
+
+
+
+
+
 
 		//sprawdzenie warunku stopu i zakończenie programu ( funkcja celu i/lub ilość iteracji )-----------------------//
+
+		if(licznikIteracjiAlgorytmu >= ProgParam.get_iloscIteracjiAlgorytmuMax())
+        {
+            return populacja[0];
+        }
+
+        //zwiekszenie licznika iteracji-----------------------------------------------------//
+        licznikIteracjiAlgorytmu++;
 
 
 

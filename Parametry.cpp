@@ -179,3 +179,15 @@ void ParametryProgramu::set_rodziceWPopulacji(bool _rodziceWPopulacji)
 {
     rodziceWPopulacji = _rodziceWPopulacji;
 }
+
+//-------------------//
+
+int ParametryProgramu::get_iloscIteracjiAlgorytmuMax()
+{
+    return iloscIteracjiAlgorytmuMax;
+}
+
+void ParametryProgramu::set_iloscIteracjiAlgorytmuMax(int _iloscIteracjiAlgorytmuMax)
+{
+    iloscIteracjiAlgorytmuMax = _iloscIteracjiAlgorytmuMax;
+}

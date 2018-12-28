@@ -12,25 +12,28 @@
 
 class ParametryProgramu{
 private:
-    int iloscFurazerek = 50;
+    int iloscFurazerek = 10;
     double zadanaJakosc = 5;
     double wspCenaJakosc = 0.5;
     double wspKaraJakosc = 0.5;
+
     int ilosc_roz = 10;//+1 rozwiazania elitarne
 
-    int iloscElita = 4; //Suma ma dawac iloscFurazerek;
-    int iloscNajlepsze = 44;
-    int iloscZwiadowcy = 2;
+    int iloscElita = 1; //Suma ma dawac iloscFurazerek;
+    int iloscNajlepsze = 5;
+    int iloscZwiadowcy = 4;
 
     int otoczenieElitaIlosc = 5;
     int otoczenieNajlepszeIlosc = 3;
     int otoczenieZwiadowcyIlosc = 2;
 
-    int otoczenieElitaHamming = 3;
-    int otoczenieNajlepszeHamming = 4;
-    int otoczenieZwiadowcyHamming = 5;
+    int otoczenieElitaHamming = 1;
+    int otoczenieNajlepszeHamming = 2;
+    int otoczenieZwiadowcyHamming = 2;
 
     bool rodziceWPopulacji = true;
+
+    int iloscIteracjiAlgorytmuMax = 100;
 
 public:
     int get_iloscFurazerek();
@@ -77,6 +80,9 @@ public:
 
     bool get_rodziceWPopulacji();
     void set_rodziceWPopulacji(bool _rodziceWPopulacji);
+
+    int get_iloscIteracjiAlgorytmuMax();
+    void set_iloscIteracjiAlgorytmuMax(int _iloscIteracjiAlgorytmuMax);
 
 };
 
