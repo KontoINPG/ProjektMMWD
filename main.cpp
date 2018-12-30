@@ -82,7 +82,7 @@ for(element : ListaZamowienia)
     cout<<"-----------------"<<endl<<endl;
 }
 
-
+    /*
     //testowe wywołania
     std::vector <int> parametry;
     parametry.push_back(0);
