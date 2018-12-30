@@ -92,10 +92,66 @@ for(element : ListaZamowienia)
     nowyPlik("Nowy_wynik", parametry);
     std::vector <int> test_wyniku;
     test_wyniku.push_back(0);
-    zapiszZamowienie(test_wyniku,"Nowy_wynik");
+    zapiszZamowienie(test_wyniku,"Nowy_wynik");*/
+    for (int j=1; j<11; j++)
+    {
+        switch (rand() % 2)
+        {
+            case 0:
+                ProgParam.set_zadanaJakosc(rand()%16);
+                break;
+            case 1:
+                ProgParam.set_wspCenaJakosc((double)rand()/RAND_MAX);
+                ProgParam.set_wspKaraJakosc((1-ProgParam.get_wspCenaJakosc()));
+                break;
+            default:
+                break;
+        }
+        for (int i=1; i<101; i++)
+        {
+            if(i<10)
+                ProgParam.set_NazwaPliku("Seria"+std::to_string(j)+"_Eksperyment0"+std::to_string(i));
+            else
+                ProgParam.set_NazwaPliku("Seria"+std::to_string(j)+"_Eksperyment"+std::to_string(i));
 
-    std::vector<int> rozwiazania = algorytm_pszczeli();
-
+            switch (rand() % 9)
+            {
+            case 0:
+                ProgParam.set_iloscElita(rand() % 10 + 1);
+                ProgParam.set_iloscFurazerek(ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+ProgParam.get_iloscZwiadowcy());
+                break;
+            case 1:
+                ProgParam.set_iloscNajlepsze(rand() % 10 + 1);
+                ProgParam.set_iloscFurazerek(ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+ProgParam.get_iloscZwiadowcy());
+                break;
+            case 2:
+                ProgParam.set_iloscZwiadowcy(rand() % 10 + 1);
+                ProgParam.set_iloscFurazerek(ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze()+ProgParam.get_iloscZwiadowcy());
+                break;
+            case 3:
+                ProgParam.set_otoczenieElitaHamming(rand() % 10 +1);
+                break;
+            case 4:
+                ProgParam.set_otoczenieElitaIlosc(rand() % 10 +1);
+                break;
+            case 5:
+                ProgParam.set_otoczenieNajlepszeHamming(rand() % 10 +1);
+                break;
+            case 6:
+                ProgParam.set_otoczenieNajlepszeIlosc(rand() % 10 +1);
+                break;
+            case 7:
+                ProgParam.set_otoczenieZwiadowcyHamming(rand() % 10 +1);
+                break;
+            case 8:
+                ProgParam.set_otoczenieZwiadowcyIlosc(rand() % 10 +1);
+                break;
+            default:
+                break;
+            }
+            std::vector<int> rozwiazania = algorytm_pszczeli();
+        }
+    }
     return 0;
 }//koniec int main();
 
