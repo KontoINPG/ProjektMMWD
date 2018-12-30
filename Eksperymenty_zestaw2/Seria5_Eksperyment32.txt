@@ -1,0 +1,416 @@
+Zadana jakosc = 12
+Wsp. cena jakosc = 0.127842
+Wsp. kara jakosc = 0.872158
+iloscElita = 6
+iloscFurazerek = 19
+iloscIteracjiAlgorytmuMax = 200
+iloscNajlepsze = 3
+iloscZwiadowcy = 10
+ilosc_roz = 10
+otoczenieElitaHamming = 10
+otoczenieElitaIlosc = 5
+otoczenieNajlepszeHamming = 9
+otoczenieNajlepszeIlosc = 5
+otoczenieZwiadowcyHamming = 4
+otoczenieZwiadowcyIlosc = 10
+Populacje eksperymentu:
+Iteracja: 1
+S23 --- S23 --- S33 --- S15 --- S45 --- S10 --- Funckja celu: 9.02692
+Iteracja: 2
+S5 --- S49 --- S25 --- S26 --- S48 --- S43 --- Funckja celu: 8.12947
+Iteracja: 3
+S28 --- S49 --- S26 --- S32 --- S50 --- S42 --- Funckja celu: 7.11824
+Iteracja: 4
+S34 --- S33 --- S39 --- S41 --- S19 --- S3 --- Funckja celu: 7.00319
+Iteracja: 5
+S7 --- S2 --- S48 --- S1 --- S15 --- S5 --- Funckja celu: 6.75645
+Iteracja: 6
+S49 --- S49 --- S26 --- S43 --- S28 --- S34 --- Funckja celu: 6.62605
+Iteracja: 7
+S22 --- S34 --- S31 --- S17 --- S50 --- S24 --- Funckja celu: 6.54679
+Iteracja: 8
+S12 --- S24 --- S44 --- S2 --- S3 --- S24 --- Funckja celu: 6.50844
+Iteracja: 9
+S7 --- S31 --- S45 --- S47 --- S18 --- S21 --- Funckja celu: 6.50844
+Iteracja: 10
+S14 --- S42 --- S15 --- S41 --- S27 --- S4 --- Funckja celu: 6.21184
+Iteracja: 11
+S42 --- S32 --- S31 --- S32 --- S8 --- S2 --- Funckja celu: 6.15048
+Iteracja: 12
+S5 --- S30 --- S50 --- S18 --- S49 --- S27 --- Funckja celu: 6.15048
+Iteracja: 13
+S9 --- S31 --- S24 --- S28 --- S15 --- S13 --- Funckja celu: 6.13514
+Iteracja: 14
+S32 --- S48 --- S31 --- S47 --- S15 --- S10 --- Funckja celu: 6.13514
+Iteracja: 15
+S29 --- S27 --- S18 --- S5 --- S20 --- S34 --- Funckja celu: 6.13514
+Iteracja: 16
+S12 --- S28 --- S26 --- S41 --- S44 --- S3 --- Funckja celu: 6.13514
+Iteracja: 17
+S34 --- S21 --- S18 --- S2 --- S44 --- S4 --- Funckja celu: 6.09551
+Iteracja: 18
+S34 --- S31 --- S2 --- S32 --- S38 --- S9 --- Funckja celu: 6.09551
+Iteracja: 19
+S42 --- S25 --- S45 --- S2 --- S23 --- S6 --- Funckja celu: 6.09551
+Iteracja: 20
+S32 --- S24 --- S33 --- S5 --- S11 --- S10 --- Funckja celu: 6.09551
+Iteracja: 21
+S26 --- S2 --- S6 --- S14 --- S20 --- S50 --- Funckja celu: 6.09551
+Iteracja: 22
+S7 --- S48 --- S39 --- S15 --- S31 --- S2 --- Funckja celu: 6.05716
+Iteracja: 23
+S7 --- S4 --- S24 --- S5 --- S27 --- S50 --- Funckja celu: 6.05716
+Iteracja: 24
+S5 --- S33 --- S39 --- S43 --- S49 --- S15 --- Funckja celu: 6.05716
+Iteracja: 25
+S19 --- S12 --- S2 --- S11 --- S8 --- S49 --- Funckja celu: 5.7465
+Iteracja: 26
+S22 --- S27 --- S35 --- S41 --- S17 --- S30 --- Funckja celu: 5.7465
+Iteracja: 27
+S49 --- S27 --- S34 --- S28 --- S21 --- S50 --- Funckja celu: 5.7465
+Iteracja: 28
+S45 --- S43 --- S41 --- S45 --- S33 --- S40 --- Funckja celu: 5.7465
+Iteracja: 29
+S38 --- S49 --- S25 --- S44 --- S23 --- S43 --- Funckja celu: 5.7465
+Iteracja: 30
+S23 --- S28 --- S14 --- S23 --- S33 --- S50 --- Funckja celu: 5.7465
+Iteracja: 31
+S15 --- S34 --- S48 --- S12 --- S32 --- S42 --- Funckja celu: 5.7465
+Iteracja: 32
+S1 --- S23 --- S35 --- S2 --- S43 --- S13 --- Funckja celu: 5.70687
+Iteracja: 33
+S41 --- S34 --- S6 --- S7 --- S50 --- S43 --- Funckja celu: 5.70687
+Iteracja: 34
+S14 --- S22 --- S41 --- S3 --- S19 --- S5 --- Funckja celu: 5.62505
+Iteracja: 35
+S32 --- S48 --- S2 --- S14 --- S14 --- S14 --- Funckja celu: 5.59309
+Iteracja: 36
+S49 --- S27 --- S14 --- S23 --- S6 --- S36 --- Funckja celu: 5.59309
+Iteracja: 37
+S22 --- S34 --- S44 --- S17 --- S17 --- S6 --- Funckja celu: 5.59309
+Iteracja: 38
+S45 --- S35 --- S50 --- S2 --- S27 --- S5 --- Funckja celu: 5.57136
+Iteracja: 39
+S18 --- S47 --- S15 --- S43 --- S50 --- S9 --- Funckja celu: 5.57136
+Iteracja: 40
+S19 --- S24 --- S33 --- S15 --- S3 --- S24 --- Funckja celu: 5.54706
+Iteracja: 41
+S14 --- S35 --- S31 --- S21 --- S10 --- S10 --- Funckja celu: 5.54706
+Iteracja: 42
+S29 --- S30 --- S24 --- S41 --- S3 --- S9 --- Funckja celu: 5.54706
+Iteracja: 43
+S49 --- S42 --- S25 --- S11 --- S10 --- S4 --- Funckja celu: 5.43201
+Iteracja: 44
+S46 --- S32 --- S47 --- S3 --- S39 --- S48 --- Funckja celu: 5.43201
+Iteracja: 45
+S28 --- S38 --- S37 --- S14 --- S28 --- S40 --- Funckja celu: 5.43201
+Iteracja: 46
+S44 --- S20 --- S17 --- S2 --- S12 --- S36 --- Funckja celu: 5.43201
+Iteracja: 47
+S28 --- S12 --- S33 --- S41 --- S39 --- S15 --- Funckja celu: 5.24152
+Iteracja: 48
+S49 --- S40 --- S24 --- S47 --- S6 --- S24 --- Funckja celu: 5.24152
+Iteracja: 49
+S36 --- S21 --- S35 --- S32 --- S21 --- S13 --- Funckja celu: 5.24152
+Iteracja: 50
+S38 --- S13 --- S19 --- S23 --- S12 --- S33 --- Funckja celu: 5.24152
+Iteracja: 51
+S14 --- S27 --- S31 --- S17 --- S20 --- S34 --- Funckja celu: 5.24152
+Iteracja: 52
+S18 --- S7 --- S23 --- S1 --- S18 --- S10 --- Funckja celu: 5.24152
+Iteracja: 53
+S17 --- S42 --- S6 --- S3 --- S11 --- S36 --- Funckja celu: 5.24152
+Iteracja: 54
+S10 --- S28 --- S31 --- S41 --- S32 --- S48 --- Funckja celu: 5.24152
+Iteracja: 55
+S8 --- S49 --- S25 --- S41 --- S17 --- S21 --- Funckja celu: 5.24152
+Iteracja: 56
+S46 --- S20 --- S39 --- S12 --- S24 --- S3 --- Funckja celu: 5.24152
+Iteracja: 57
+S9 --- S33 --- S41 --- S23 --- S33 --- S46 --- Funckja celu: 5.12391
+Iteracja: 58
+S45 --- S15 --- S48 --- S44 --- S50 --- S48 --- Funckja celu: 5.12391
+Iteracja: 59
+S44 --- S15 --- S41 --- S28 --- S18 --- S2 --- Funckja celu: 5.12391
+Iteracja: 60
+S12 --- S47 --- S14 --- S5 --- S17 --- S4 --- Funckja celu: 4.88229
+Iteracja: 61
+S17 --- S28 --- S25 --- S3 --- S39 --- S27 --- Funckja celu: 4.79024
+Iteracja: 62
+S19 --- S24 --- S2 --- S10 --- S2 --- S27 --- Funckja celu: 4.79024
+Iteracja: 63
+S32 --- S28 --- S37 --- S26 --- S50 --- S36 --- Funckja celu: 4.79024
+Iteracja: 64
+S45 --- S35 --- S15 --- S31 --- S50 --- S6 --- Funckja celu: 4.79024
+Iteracja: 65
+S18 --- S13 --- S18 --- S10 --- S31 --- S9 --- Funckja celu: 4.79024
+Iteracja: 66
+S22 --- S38 --- S31 --- S44 --- S17 --- S36 --- Funckja celu: 4.79024
+Iteracja: 67
+S22 --- S34 --- S26 --- S10 --- S15 --- S46 --- Funckja celu: 4.78896
+Iteracja: 68
+S15 --- S15 --- S17 --- S21 --- S15 --- S30 --- Funckja celu: 4.78896
+Iteracja: 69
+S42 --- S32 --- S18 --- S2 --- S12 --- S27 --- Funckja celu: 4.78896
+Iteracja: 70
+S19 --- S32 --- S19 --- S31 --- S11 --- S9 --- Funckja celu: 4.78896
+Iteracja: 71
+S48 --- S24 --- S2 --- S33 --- S50 --- S10 --- Funckja celu: 4.78896
+Iteracja: 72
+S10 --- S31 --- S33 --- S17 --- S43 --- S50 --- Funckja celu: 4.78896
+Iteracja: 73
+S29 --- S32 --- S23 --- S26 --- S4 --- S34 --- Funckja celu: 4.78896
+Iteracja: 74
+S44 --- S4 --- S33 --- S33 --- S18 --- S33 --- Funckja celu: 4.78896
+Iteracja: 75
+S8 --- S22 --- S45 --- S5 --- S19 --- S49 --- Funckja celu: 4.78896
+Iteracja: 76
+S40 --- S21 --- S33 --- S44 --- S32 --- S11 --- Funckja celu: 4.78896
+Iteracja: 77
+S38 --- S35 --- S8 --- S7 --- S15 --- S13 --- Funckja celu: 4.78896
+Iteracja: 78
+S5 --- S34 --- S17 --- S45 --- S16 --- S27 --- Funckja celu: 4.78896
+Iteracja: 79
+S22 --- S20 --- S23 --- S44 --- S24 --- S34 --- Funckja celu: 4.78896
+Iteracja: 80
+S10 --- S48 --- S33 --- S31 --- S31 --- S15 --- Funckja celu: 4.78896
+Iteracja: 81
+S48 --- S24 --- S8 --- S1 --- S33 --- S10 --- Funckja celu: 4.78896
+Iteracja: 82
+S1 --- S35 --- S31 --- S13 --- S6 --- S27 --- Funckja celu: 4.78896
+Iteracja: 83
+S29 --- S25 --- S17 --- S1 --- S4 --- S15 --- Funckja celu: 4.78896
+Iteracja: 84
+S9 --- S34 --- S27 --- S1 --- S6 --- S34 --- Funckja celu: 4.78896
+Iteracja: 85
+S41 --- S35 --- S37 --- S43 --- S38 --- S33 --- Funckja celu: 4.78896
+Iteracja: 86
+S9 --- S27 --- S14 --- S28 --- S18 --- S34 --- Funckja celu: 4.78896
+Iteracja: 87
+S5 --- S27 --- S25 --- S43 --- S4 --- S46 --- Funckja celu: 4.78896
+Iteracja: 88
+S45 --- S7 --- S2 --- S10 --- S2 --- S49 --- Funckja celu: 4.78896
+Iteracja: 89
+S17 --- S23 --- S17 --- S33 --- S20 --- S27 --- Funckja celu: 4.78896
+Iteracja: 90
+S18 --- S22 --- S24 --- S13 --- S22 --- S44 --- Funckja celu: 4.78896
+Iteracja: 91
+S8 --- S13 --- S27 --- S13 --- S22 --- S4 --- Funckja celu: 4.78896
+Iteracja: 92
+S25 --- S4 --- S26 --- S32 --- S3 --- S2 --- Funckja celu: 4.78896
+Iteracja: 93
+S34 --- S43 --- S48 --- S28 --- S18 --- S27 --- Funckja celu: 4.76723
+Iteracja: 94
+S17 --- S4 --- S35 --- S23 --- S20 --- S43 --- Funckja celu: 4.76723
+Iteracja: 95
+S26 --- S47 --- S8 --- S14 --- S39 --- S24 --- Funckja celu: 4.76723
+Iteracja: 96
+S23 --- S24 --- S19 --- S9 --- S19 --- S46 --- Funckja celu: 4.76723
+Iteracja: 97
+S38 --- S25 --- S15 --- S28 --- S49 --- S3 --- Funckja celu: 4.76723
+Iteracja: 98
+S36 --- S27 --- S35 --- S7 --- S32 --- S30 --- Funckja celu: 4.76723
+Iteracja: 99
+S44 --- S20 --- S19 --- S23 --- S2 --- S50 --- Funckja celu: 4.76723
+Iteracja: 100
+S17 --- S25 --- S6 --- S21 --- S3 --- S50 --- Funckja celu: 4.76723
+Iteracja: 101
+S7 --- S30 --- S27 --- S3 --- S2 --- S49 --- Funckja celu: 4.76723
+Iteracja: 102
+S28 --- S27 --- S31 --- S21 --- S21 --- S4 --- Funckja celu: 4.76723
+Iteracja: 103
+S19 --- S40 --- S18 --- S18 --- S49 --- S5 --- Funckja celu: 4.76723
+Iteracja: 104
+S15 --- S27 --- S2 --- S41 --- S19 --- S24 --- Funckja celu: 4.76723
+Iteracja: 105
+S12 --- S13 --- S39 --- S11 --- S4 --- S49 --- Funckja celu: 4.76723
+Iteracja: 106
+S41 --- S32 --- S48 --- S43 --- S28 --- S3 --- Funckja celu: 4.76723
+Iteracja: 107
+S40 --- S7 --- S37 --- S28 --- S45 --- S5 --- Funckja celu: 4.76723
+Iteracja: 108
+S7 --- S4 --- S24 --- S23 --- S28 --- S21 --- Funckja celu: 4.76723
+Iteracja: 109
+S8 --- S48 --- S26 --- S32 --- S16 --- S50 --- Funckja celu: 4.76723
+Iteracja: 110
+S48 --- S30 --- S48 --- S7 --- S24 --- S34 --- Funckja celu: 4.7276
+Iteracja: 111
+S8 --- S15 --- S47 --- S3 --- S44 --- S44 --- Funckja celu: 4.7276
+Iteracja: 112
+S2 --- S15 --- S24 --- S47 --- S22 --- S13 --- Funckja celu: 4.67263
+Iteracja: 113
+S9 --- S15 --- S10 --- S33 --- S24 --- S2 --- Funckja celu: 4.67263
+Iteracja: 114
+S49 --- S48 --- S17 --- S47 --- S18 --- S11 --- Funckja celu: 4.67263
+Iteracja: 115
+S48 --- S24 --- S17 --- S7 --- S19 --- S9 --- Funckja celu: 4.67263
+Iteracja: 116
+S2 --- S33 --- S26 --- S5 --- S17 --- S36 --- Funckja celu: 4.67263
+Iteracja: 117
+S1 --- S42 --- S31 --- S12 --- S11 --- S34 --- Funckja celu: 4.67263
+Iteracja: 118
+S8 --- S40 --- S26 --- S7 --- S38 --- S24 --- Funckja celu: 4.67263
+Iteracja: 119
+S22 --- S15 --- S37 --- S23 --- S39 --- S44 --- Funckja celu: 4.67263
+Iteracja: 120
+S42 --- S25 --- S50 --- S17 --- S12 --- S3 --- Funckja celu: 4.67263
+Iteracja: 121
+S17 --- S22 --- S33 --- S32 --- S12 --- S13 --- Funckja celu: 4.67263
+Iteracja: 122
+S42 --- S27 --- S26 --- S41 --- S50 --- S13 --- Funckja celu: 4.67263
+Iteracja: 123
+S32 --- S47 --- S31 --- S15 --- S44 --- S43 --- Funckja celu: 4.67263
+Iteracja: 124
+S19 --- S21 --- S45 --- S47 --- S38 --- S43 --- Funckja celu: 4.67263
+Iteracja: 125
+S18 --- S20 --- S18 --- S5 --- S17 --- S8 --- Funckja celu: 4.67263
+Iteracja: 126
+S8 --- S42 --- S50 --- S18 --- S3 --- S33 --- Funckja celu: 4.65089
+Iteracja: 127
+S7 --- S23 --- S10 --- S21 --- S3 --- S6 --- Funckja celu: 4.65089
+Iteracja: 128
+S15 --- S33 --- S24 --- S17 --- S10 --- S46 --- Funckja celu: 4.65089
+Iteracja: 129
+S46 --- S42 --- S2 --- S26 --- S44 --- S5 --- Funckja celu: 4.65089
+Iteracja: 130
+S41 --- S13 --- S27 --- S2 --- S20 --- S5 --- Funckja celu: 4.65089
+Iteracja: 131
+S17 --- S12 --- S19 --- S5 --- S21 --- S50 --- Funckja celu: 4.65089
+Iteracja: 132
+S23 --- S2 --- S45 --- S1 --- S16 --- S34 --- Funckja celu: 4.65089
+Iteracja: 133
+S34 --- S34 --- S8 --- S44 --- S27 --- S21 --- Funckja celu: 4.65089
+Iteracja: 134
+S40 --- S27 --- S47 --- S41 --- S20 --- S42 --- Funckja celu: 4.65089
+Iteracja: 135
+S22 --- S43 --- S39 --- S9 --- S45 --- S13 --- Funckja celu: 4.65089
+Iteracja: 136
+S40 --- S34 --- S19 --- S7 --- S38 --- S44 --- Funckja celu: 4.65089
+Iteracja: 137
+S42 --- S43 --- S39 --- S9 --- S10 --- S5 --- Funckja celu: 4.65089
+Iteracja: 138
+S34 --- S47 --- S18 --- S28 --- S43 --- S46 --- Funckja celu: 4.65089
+Iteracja: 139
+S48 --- S27 --- S23 --- S31 --- S27 --- S48 --- Funckja celu: 4.65089
+Iteracja: 140
+S45 --- S48 --- S23 --- S43 --- S28 --- S34 --- Funckja celu: 4.65089
+Iteracja: 141
+S40 --- S24 --- S44 --- S1 --- S33 --- S36 --- Funckja celu: 4.65089
+Iteracja: 142
+S26 --- S22 --- S19 --- S26 --- S2 --- S3 --- Funckja celu: 4.65089
+Iteracja: 143
+S1 --- S4 --- S6 --- S9 --- S27 --- S8 --- Funckja celu: 4.65089
+Iteracja: 144
+S17 --- S31 --- S17 --- S44 --- S28 --- S24 --- Funckja celu: 4.65089
+Iteracja: 145
+S34 --- S20 --- S24 --- S9 --- S2 --- S44 --- Funckja celu: 4.65089
+Iteracja: 146
+S25 --- S43 --- S34 --- S43 --- S6 --- S30 --- Funckja celu: 4.65089
+Iteracja: 147
+S2 --- S28 --- S31 --- S47 --- S21 --- S43 --- Funckja celu: 4.65089
+Iteracja: 148
+S29 --- S40 --- S48 --- S17 --- S10 --- S27 --- Funckja celu: 4.65089
+Iteracja: 149
+S26 --- S21 --- S50 --- S26 --- S21 --- S42 --- Funckja celu: 4.65089
+Iteracja: 150
+S44 --- S49 --- S25 --- S44 --- S39 --- S44 --- Funckja celu: 4.65089
+Iteracja: 151
+S9 --- S38 --- S10 --- S10 --- S21 --- S33 --- Funckja celu: 4.65089
+Iteracja: 152
+S8 --- S22 --- S2 --- S1 --- S14 --- S30 --- Funckja celu: 4.65089
+Iteracja: 153
+S1 --- S23 --- S33 --- S2 --- S8 --- S6 --- Funckja celu: 4.65089
+Iteracja: 154
+S44 --- S30 --- S48 --- S26 --- S17 --- S44 --- Funckja celu: 4.65089
+Iteracja: 155
+S34 --- S7 --- S2 --- S5 --- S19 --- S44 --- Funckja celu: 4.65089
+Iteracja: 156
+S5 --- S49 --- S8 --- S10 --- S22 --- S49 --- Funckja celu: 4.65089
+Iteracja: 157
+S38 --- S35 --- S8 --- S7 --- S31 --- S42 --- Funckja celu: 4.65089
+Iteracja: 158
+S8 --- S21 --- S2 --- S34 --- S39 --- S43 --- Funckja celu: 4.57802
+Iteracja: 159
+S49 --- S2 --- S48 --- S28 --- S39 --- S50 --- Funckja celu: 4.57802
+Iteracja: 160
+S17 --- S47 --- S50 --- S43 --- S10 --- S11 --- Funckja celu: 4.55245
+Iteracja: 161
+S19 --- S43 --- S15 --- S41 --- S16 --- S8 --- Funckja celu: 4.44123
+Iteracja: 162
+S42 --- S27 --- S34 --- S14 --- S27 --- S43 --- Funckja celu: 4.44123
+Iteracja: 163
+S41 --- S13 --- S35 --- S13 --- S31 --- S49 --- Funckja celu: 4.44123
+Iteracja: 164
+S22 --- S20 --- S37 --- S43 --- S8 --- S15 --- Funckja celu: 4.44123
+Iteracja: 165
+S10 --- S27 --- S45 --- S41 --- S4 --- S10 --- Funckja celu: 4.44123
+Iteracja: 166
+S2 --- S24 --- S10 --- S1 --- S3 --- S36 --- Funckja celu: 4.22773
+Iteracja: 167
+S15 --- S15 --- S17 --- S9 --- S39 --- S24 --- Funckja celu: 4.22773
+Iteracja: 168
+S9 --- S7 --- S39 --- S44 --- S48 --- S49 --- Funckja celu: 4.22773
+Iteracja: 169
+S23 --- S22 --- S10 --- S33 --- S18 --- S50 --- Funckja celu: 4.22773
+Iteracja: 170
+S15 --- S32 --- S48 --- S14 --- S45 --- S11 --- Funckja celu: 4.22773
+Iteracja: 171
+S12 --- S43 --- S26 --- S21 --- S23 --- S43 --- Funckja celu: 4.22773
+Iteracja: 172
+S23 --- S25 --- S41 --- S41 --- S28 --- S10 --- Funckja celu: 4.22773
+Iteracja: 173
+S2 --- S12 --- S2 --- S18 --- S20 --- S43 --- Funckja celu: 4.22773
+Iteracja: 174
+S22 --- S28 --- S27 --- S3 --- S27 --- S34 --- Funckja celu: 4.22773
+Iteracja: 175
+S46 --- S40 --- S18 --- S28 --- S43 --- S40 --- Funckja celu: 4.22773
+Iteracja: 176
+S15 --- S47 --- S39 --- S23 --- S3 --- S6 --- Funckja celu: 4.22773
+Iteracja: 177
+S8 --- S28 --- S27 --- S41 --- S3 --- S27 --- Funckja celu: 4.22773
+Iteracja: 178
+S49 --- S30 --- S50 --- S18 --- S12 --- S48 --- Funckja celu: 4.22773
+Iteracja: 179
+S49 --- S12 --- S17 --- S47 --- S15 --- S33 --- Funckja celu: 4.22773
+Iteracja: 180
+S45 --- S48 --- S23 --- S32 --- S22 --- S48 --- Funckja celu: 4.22773
+Iteracja: 181
+S25 --- S38 --- S31 --- S28 --- S27 --- S9 --- Funckja celu: 4.22773
+Iteracja: 182
+S26 --- S48 --- S47 --- S9 --- S21 --- S33 --- Funckja celu: 4.22773
+Iteracja: 183
+S44 --- S24 --- S18 --- S26 --- S8 --- S44 --- Funckja celu: 4.22773
+Iteracja: 184
+S40 --- S24 --- S18 --- S34 --- S3 --- S48 --- Funckja celu: 4.22773
+Iteracja: 185
+S42 --- S12 --- S26 --- S45 --- S8 --- S3 --- Funckja celu: 4.22773
+Iteracja: 186
+S23 --- S38 --- S31 --- S15 --- S31 --- S9 --- Funckja celu: 4.22773
+Iteracja: 187
+S49 --- S49 --- S33 --- S11 --- S11 --- S34 --- Funckja celu: 4.22773
+Iteracja: 188
+S17 --- S13 --- S19 --- S41 --- S15 --- S6 --- Funckja celu: 4.22773
+Iteracja: 189
+S19 --- S13 --- S39 --- S32 --- S16 --- S10 --- Funckja celu: 4.22773
+Iteracja: 190
+S10 --- S2 --- S23 --- S43 --- S32 --- S2 --- Funckja celu: 4.22773
+Iteracja: 191
+S14 --- S48 --- S2 --- S41 --- S2 --- S49 --- Funckja celu: 4.22773
+Iteracja: 192
+S8 --- S13 --- S26 --- S31 --- S21 --- S36 --- Funckja celu: 4.22773
+Iteracja: 193
+S10 --- S23 --- S19 --- S9 --- S19 --- S46 --- Funckja celu: 4.22773
+Iteracja: 194
+S25 --- S22 --- S44 --- S45 --- S11 --- S24 --- Funckja celu: 4.22773
+Iteracja: 195
+S32 --- S21 --- S8 --- S23 --- S24 --- S43 --- Funckja celu: 4.22773
+Iteracja: 196
+S34 --- S48 --- S44 --- S23 --- S22 --- S13 --- Funckja celu: 4.22773
+Iteracja: 197
+S10 --- S28 --- S39 --- S7 --- S17 --- S24 --- Funckja celu: 4.22773
+Iteracja: 198
+S44 --- S23 --- S15 --- S47 --- S16 --- S46 --- Funckja celu: 4.22773
+Iteracja: 199
+S38 --- S42 --- S33 --- S31 --- S32 --- S49 --- Funckja celu: 4.22773
+Iteracja: 200
+S40 --- S33 --- S39 --- S13 --- S45 --- S6 --- Funckja celu: 4.22773

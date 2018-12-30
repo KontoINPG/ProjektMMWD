@@ -16,7 +16,7 @@ int main()
     }
     for (int j=300; j<350; j++)
     {
-        if(rand() % 101<40)
+        if(rand() % 101<50)
         {
             plikBazaTowarow << "$;BC" << j << ";" << rand() % 16 + 1 << ";#" << std::endl;
         }
