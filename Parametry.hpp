@@ -1,6 +1,6 @@
 #ifndef PARAMETRY_HPP
 #define PARAMETRY_HPP
-
+#include <string>
 
 //ParametryProgramu-----------------------------------------------------------------------//
 
