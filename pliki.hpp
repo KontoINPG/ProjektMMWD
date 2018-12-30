@@ -7,7 +7,7 @@ int wczytajBaze();
 
 int wczytajZamowienie();
 
-int zapiszZamowienie(std::vector <int> Wynik, std::string plik_nazwa);
+int zapiszZamowienie(std::vector <int> Wynik, std::string plik_nazwa, int iteracja, double fcelu);
 
-int nowyPlik(std::string plik_nazwa, std::vector <int> _parametry);
+int nowyPlik(std::string plik_nazwa, std::vector <int> _parametry,  std::vector <double> _podstparametry);
 #endif // PLIKI_HPP
