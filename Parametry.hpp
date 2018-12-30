@@ -33,7 +33,9 @@ private:
 
     bool rodziceWPopulacji = true;
 
-    int iloscIteracjiAlgorytmuMax = 100;
+    int iloscIteracjiAlgorytmuMax = 200;
+
+    std::string NazwaPliku = "Eksperyment";
 
 public:
     int get_iloscFurazerek();
