@@ -193,26 +193,38 @@ int zapiszZamowienie(std::vector <int> Wynik, std::string plik_nazwa, int iterac
         cout<<"Plik do zapisu nie moze byc otwarty..."<<endl;
         return(-1);
     }
-
+    plikWynik << "Iteracja: " << iteracja << endl;
     for (wynik:Wynik)
     {
     std::string Nazwa_sklepu;
     Nazwa_sklepu=BazaSklepow[wynik].get_nazwa();
-    plikWynik << Nazwa_sklepu << endl;
+    plikWynik << Nazwa_sklepu << " --- ";
     //plikWynik.write( Nazwa_sklepu,Nazwa_sklepu.length());
     }
-
+    plikWynik << "Funckja celu: " << fcelu << endl;
     plikWynik.close();
 	return 0;
 }
 
-int nowyPlik(std::string plik_nazwa, std::vector <int> _parametry)
+
+int nowyPlik(std::string plik_nazwa, std::vector <int> _parametry, std::vector <double> _podstparametry)
 {
     std::ofstream plik (plik_nazwa + ".txt");
-    plik << "Zadana jakosc = " << _parametry[0] << endl;
-    plik << "Wsp. cena jakosc = " << _parametry[1] << endl;
-    plik << "Wsp. kara jakosc = " << _parametry[2] << endl;
-    plik << "Ilosc rozwiazan = " << _parametry[3] << endl;
+    plik << "Zadana jakosc = " << _podstparametry[0] << endl;
+    plik << "Wsp. cena jakosc = " << _podstparametry[1] << endl;
+    plik << "Wsp. kara jakosc = " << _podstparametry[2] << endl;
+    plik << "iloscElita = " << _parametry[0] << endl;
+    plik << "iloscFurazerek = " << _parametry[1] << endl;
+    plik << "iloscIteracjiAlgorytmuMax = " << _parametry[2] << endl;
+    plik << "iloscNajlepsze = " << _parametry[3] << endl;
+    plik << "iloscZwiadowcy = " << _parametry[4] << endl;
+    plik << "ilosc_roz = " << _parametry[5] << endl;
+    plik << "otoczenieElitaHamming = " << _parametry[6] << endl;
+    plik << "otoczenieElitaIlosc = " << _parametry[7] << endl;
+    plik << "otoczenieNajlepszeHamming = " << _parametry[8] << endl;
+    plik << "otoczenieNajlepszeIlosc = " << _parametry[9] << endl;
+    plik << "otoczenieZwiadowcyHamming = " << _parametry[10] << endl;
+    plik << "otoczenieZwiadowcyIlosc = " << _parametry[11] << endl;
     plik << "Populacje eksperymentu:" << endl;
 }
 
