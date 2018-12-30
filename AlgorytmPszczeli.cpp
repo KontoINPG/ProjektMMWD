@@ -192,6 +192,27 @@ std::vector<int> algorytm_pszczeli()
 
     int licznikIteracjiAlgorytmu = 1;
 
+    //Utworzenie pliku dla nowego eksperymentu
+
+    std::vector <int> parametry;
+    std::vector <double> podstparametry;
+    parametry.push_back(ProgParam.get_iloscElita());
+    parametry.push_back(ProgParam.get_iloscFurazerek());
+    parametry.push_back(ProgParam.get_iloscIteracjiAlgorytmuMax());
+    parametry.push_back(ProgParam.get_iloscNajlepsze());
+    parametry.push_back(ProgParam.get_iloscZwiadowcy());
+    parametry.push_back(ProgParam.get_ilosc_roz());
+    parametry.push_back(ProgParam.get_otoczenieElitaHamming());
+    parametry.push_back(ProgParam.get_otoczenieElitaIlosc());
+    parametry.push_back(ProgParam.get_otoczenieNajlepszeHamming());
+    parametry.push_back(ProgParam.get_otoczenieNajlepszeIlosc());
+    parametry.push_back(ProgParam.get_otoczenieZwiadowcyHamming());
+    parametry.push_back(ProgParam.get_otoczenieZwiadowcyIlosc());
+    podstparametry.push_back(ProgParam.get_zadanaJakosc());
+    podstparametry.push_back(ProgParam.get_wspCenaJakosc());
+    podstparametry.push_back(ProgParam.get_wspKaraJakosc());
+    nowyPlik(ProgParam.get_NazwaPliku(), parametry, podstparametry);
+
 	while (1)
 	{
 
