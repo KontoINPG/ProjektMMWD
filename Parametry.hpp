@@ -84,6 +84,8 @@ public:
     int get_iloscIteracjiAlgorytmuMax();
     void set_iloscIteracjiAlgorytmuMax(int _iloscIteracjiAlgorytmuMax);
 
+    std::string get_NazwaPliku();
+    void set_NazwaPliku(std::string _NazwaPliku);
 };
 
 //Koniec ParametryProgramu----------------------------------------------------------------//
