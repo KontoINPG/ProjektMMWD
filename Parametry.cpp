@@ -191,3 +191,13 @@ void ParametryProgramu::set_iloscIteracjiAlgorytmuMax(int _iloscIteracjiAlgorytm
 {
     iloscIteracjiAlgorytmuMax = _iloscIteracjiAlgorytmuMax;
 }
+
+std::string ParametryProgramu::get_NazwaPliku()
+{
+    return NazwaPliku;
+}
+
+void ParametryProgramu::set_NazwaPliku(std::string _NazwaPliku)
+{
+    NazwaPliku = _NazwaPliku;
+}
