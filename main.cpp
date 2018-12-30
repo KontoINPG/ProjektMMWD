@@ -2,7 +2,7 @@
 #include<map>
 #include<vector>
 #include<sstream>
-
+#include<string>
 #include<ctime>
 #include<cstdlib>
 
@@ -20,7 +20,7 @@ using std::endl;
 extern std::vector<Produkt> BazaProduktow;
 extern std::vector<Sklep> BazaSklepow;
 extern std::vector<ElementZamawiany> ListaZamowienia;
-
+extern ParametryProgramu ProgParam;
 
 
 
