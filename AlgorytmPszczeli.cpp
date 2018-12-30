@@ -308,7 +308,7 @@ std::vector<int> algorytm_pszczeli()
 
 
         //zapisanie wyników do pliku--------------------------------------------------------//
-        cout<<"Iteracja: "<<licznikIteracjiAlgorytmu<<", f_celu: "<<cenaNajlepsza<<endl;
+        zapiszZamowienie(populacja.back(),ProgParam.get_NazwaPliku(),licznikIteracjiAlgorytmu,cenaNajlepsza);
 
 
 
