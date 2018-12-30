@@ -1,7 +1,7 @@
 #include"AlgorytmPszczeli.hpp"
 #include"produkt.hpp"
 #include"Parametry.hpp"
-
+#include"pliki.hpp"
 #include<limits>
 
 extern std::vector<Produkt> BazaProduktow;
