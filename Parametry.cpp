@@ -158,18 +158,6 @@ void ParametryProgramu::set_wspKaraJakosc(double _wspKaraJakosc)
 
 //-------------------//
 
-int ParametryProgramu::get_ilosc_roz()
-{
-    return ilosc_roz;
-}
-
-void ParametryProgramu::set_ilosc_roz(int _ilosc_roz)
-{
-    ilosc_roz = _ilosc_roz;
-}
-
-//-------------------//
-
 bool ParametryProgramu::get_rodziceWPopulacji()
 {
     return rodziceWPopulacji;
