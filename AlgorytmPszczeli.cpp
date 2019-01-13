@@ -167,7 +167,6 @@ std::vector<int> algorytm_pszczeli()
     //Losowanie poczatkowych rozwiazan:
 
     std::vector<int> rozwiazaniePomocniczeStartowe;//Tylko do wystartowania losujRozwiazaniaZOtoczenia potrzebne;
-
     for(int lElem=0;lElem<ListaZamowienia.size();lElem++)
         {
             rozwiazaniePomocniczeStartowe.push_back(0);
@@ -176,6 +175,8 @@ std::vector<int> algorytm_pszczeli()
 
 
     std::vector<std::vector<int>> rozwiazaniePoczatkowe = losujRozwiazaniaZOtoczenia(rozwiazaniePomocniczeStartowe,ProgParam.get_iloscFurazerek(),ListaZamowienia.size(),macierzDostawcow);//losowanie z miarą Hamminga = il. zamawianych elem. => czyli losowanie wszystkich elementów wektora;
+
+
 
     //cout<<"TEST FUNKCJI CELU: "<<f_celu(rozwiazaniePoczatkowe[0])<<endl;
 
@@ -202,7 +203,6 @@ std::vector<int> algorytm_pszczeli()
     parametry.push_back(ProgParam.get_iloscIteracjiAlgorytmuMax());
     parametry.push_back(ProgParam.get_iloscNajlepsze());
     parametry.push_back(ProgParam.get_iloscZwiadowcy());
-    parametry.push_back(ProgParam.get_ilosc_roz());
     parametry.push_back(ProgParam.get_otoczenieElitaHamming());
     parametry.push_back(ProgParam.get_otoczenieElitaIlosc());
     parametry.push_back(ProgParam.get_otoczenieNajlepszeHamming());
