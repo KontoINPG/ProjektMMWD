@@ -14,6 +14,11 @@ int main()
         std::cout<<"Plik z baza towarow nie moze byc otwarty..."<<std::endl;
         return(-1);
     }
+    plikBazaTowarow << "@;S" << 0 << ";#" << std::endl;
+    for (int j=300; j<350; j++)
+    {
+        plikBazaTowarow << "$;BC" << j << ";S0;ST;0.99;20;1;" << std::endl;
+    }
     for (int i=1; i<51; i++)
     {
         plikBazaTowarow << "@;S" << i << ";#" << std::endl;
