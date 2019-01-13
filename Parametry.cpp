@@ -189,3 +189,13 @@ void ParametryProgramu::set_NazwaPliku(std::string _NazwaPliku)
 {
     NazwaPliku = _NazwaPliku;
 }
+
+int ParametryProgramu::get_seria()
+{
+    return seria;
+}
+
+void ParametryProgramu::set_seria(int _seria)
+{
+    seria=_seria;
+}
