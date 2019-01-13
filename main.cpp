@@ -93,8 +93,9 @@ for(element : ListaZamowienia)
     std::vector <int> test_wyniku;
     test_wyniku.push_back(0);
     zapiszZamowienie(test_wyniku,"Nowy_wynik");*/
-    for (int j=1; j<11; j++)
+    for (int j=1; j<6; j++)
     {
+        ProgParam.set_seria(j);
         switch (rand() % 2)
         {
             case 0:
@@ -107,13 +108,14 @@ for(element : ListaZamowienia)
             default:
                 break;
         }
-        for (int i=1; i<101; i++)
+        for (int i=1; i<201; i++)
         {
             if(i<10)
+                ProgParam.set_NazwaPliku("Seria"+std::to_string(j)+"_Eksperyment00"+std::to_string(i));
+            else if(i<100)
                 ProgParam.set_NazwaPliku("Seria"+std::to_string(j)+"_Eksperyment0"+std::to_string(i));
             else
                 ProgParam.set_NazwaPliku("Seria"+std::to_string(j)+"_Eksperyment"+std::to_string(i));
-
             switch (rand() % 9)
             {
             case 0:
