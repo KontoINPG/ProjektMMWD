@@ -17,7 +17,6 @@ private:
     double wspCenaJakosc = 0.5;
     double wspKaraJakosc = 0.5;
 
-    int ilosc_roz = 10;//+1 rozwiazania elitarne
 
     int iloscElita = 1; //Suma ma dawac iloscFurazerek;
     int iloscNajlepsze = 5;
