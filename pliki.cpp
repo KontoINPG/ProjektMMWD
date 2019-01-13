@@ -218,13 +218,20 @@ int nowyPlik(std::string plik_nazwa, std::vector <int> _parametry, std::vector <
     plik << "iloscIteracjiAlgorytmuMax = " << _parametry[2] << endl;
     plik << "iloscNajlepsze = " << _parametry[3] << endl;
     plik << "iloscZwiadowcy = " << _parametry[4] << endl;
-    plik << "ilosc_roz = " << _parametry[5] << endl;
-    plik << "otoczenieElitaHamming = " << _parametry[6] << endl;
-    plik << "otoczenieElitaIlosc = " << _parametry[7] << endl;
-    plik << "otoczenieNajlepszeHamming = " << _parametry[8] << endl;
-    plik << "otoczenieNajlepszeIlosc = " << _parametry[9] << endl;
-    plik << "otoczenieZwiadowcyHamming = " << _parametry[10] << endl;
-    plik << "otoczenieZwiadowcyIlosc = " << _parametry[11] << endl;
+    plik << "otoczenieElitaHamming = " << _parametry[5] << endl;
+    plik << "otoczenieElitaIlosc = " << _parametry[6] << endl;
+    plik << "otoczenieNajlepszeHamming = " << _parametry[7] << endl;
+    plik << "otoczenieNajlepszeIlosc = " << _parametry[8] << endl;
+    plik << "otoczenieZwiadowcyHamming = " << _parametry[9] << endl;
+    plik << "otoczenieZwiadowcyIlosc = " << _parametry[10] << endl;
     plik << "Populacje eksperymentu:" << endl;
 }
 
+int zapiszStatystyke(std::vector <int> _parametry, std::vector <double> _podstparametry, int ost_iteracja, double fcelu, int seria)
+{
+    std::ofstream R ("Dane_do_R_seria_"+ std::to_string(seria) +".txt", std::ios::app);
+    //R << _podstparametry[0] << "," << _podstparametry[1] << "," << _podstparametry[2] << ",";
+    R << _parametry[0] << "," << _parametry[1] << "," << _parametry[2] << "," << _parametry[3] << "," << _parametry[4] << "," << _parametry[5] << ",";
+    R << _parametry[6] << "," << _parametry[7] << "," << _parametry[8] << "," << _parametry[9] << "," << _parametry[10] << ",";
+    R << ost_iteracja << "," << fcelu << endl;
+}
