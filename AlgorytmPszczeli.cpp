@@ -326,8 +326,9 @@ std::vector<int> algorytm_pszczeli()
 
 		//sprawdzenie warunku stopu i zakończenie programu ( funkcja celu i/lub ilość iteracji )-----------------------//
 
-		if(licznikIteracjiAlgorytmu >= ProgParam.get_iloscIteracjiAlgorytmuMax())
+		if((licznikIteracjiAlgorytmu >= ProgParam.get_iloscIteracjiAlgorytmuMax()) || (licznikIteracjiAlgorytmu-Iteracje_do_najlepszego)>50)
         {
+            zapiszStatystyke(parametry,podstparametry,Iteracje_do_najlepszego,cenaNajlepsza, ProgParam.get_seria());
             return populacja[0];
         }
 
