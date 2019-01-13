@@ -77,9 +77,6 @@ public:
     double get_wspKaraJakosc();
     void set_wspKaraJakosc(double _wspKaraJakosc);
 
-    int get_ilosc_roz();
-    void set_ilosc_roz(int _ilosc_roz);
-
     bool get_rodziceWPopulacji();
     void set_rodziceWPopulacji(bool _rodziceWPopulacji);
 
@@ -88,6 +85,9 @@ public:
 
     std::string get_NazwaPliku();
     void set_NazwaPliku(std::string _NazwaPliku);
+
+    int get_seria();
+    void set_seria(int _seria);
 };
 
 //Koniec ParametryProgramu----------------------------------------------------------------//
