@@ -191,7 +191,8 @@ std::vector<int> algorytm_pszczeli()
     int ilEl_Naj = (ProgParam.get_iloscElita()+ProgParam.get_iloscNajlepsze());
 
     int licznikIteracjiAlgorytmu = 1;
-
+    int Iteracje_do_najlepszego = 1;
+    double Cena_naj = 10000;
     //Utworzenie pliku dla nowego eksperymentu
 
     std::vector <int> parametry;
@@ -311,7 +312,11 @@ std::vector<int> algorytm_pszczeli()
         zapiszZamowienie(populacja.back(),ProgParam.get_NazwaPliku(),licznikIteracjiAlgorytmu,cenaNajlepsza);
 
 
-
+        if(Cena_naj>cenaNajlepsza)
+        {
+            Cena_naj=cenaNajlepsza;
+            Iteracje_do_najlepszego=licznikIteracjiAlgorytmu;
+        }
 
 
 
