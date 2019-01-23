@@ -93,7 +93,7 @@ for(element : ListaZamowienia)
     std::vector <int> test_wyniku;
     test_wyniku.push_back(0);
     zapiszZamowienie(test_wyniku,"Nowy_wynik");*/
-    for (int j=1; j<6; j++)
+    /*for (int j=1; j<6; j++)
     {
         ProgParam.set_seria(j);
         switch (rand() % 2)
@@ -150,10 +150,20 @@ for(element : ListaZamowienia)
                 break;
             default:
                 break;
-            }
+            }*/
+            ProgParam.set_iloscElita(5);
+            ProgParam.set_iloscNajlepsze(7);
+            ProgParam.set_iloscZwiadowcy(9);
+            ProgParam.set_iloscFurazerek(23);
+            ProgParam.set_otoczenieElitaHamming(1);
+            ProgParam.set_otoczenieNajlepszeHamming(2);
+            ProgParam.set_otoczenieZwiadowcyHamming(9);
+            ProgParam.set_otoczenieElitaIlosc(9);
+            ProgParam.set_otoczenieNajlepszeIlosc(7);
+            ProgParam.set_otoczenieZwiadowcyIlosc(3);
             std::vector<int> rozwiazania = algorytm_pszczeli();
-        }
-    }
+        /*}
+    }*/
     return 0;
 }//koniec int main();
 

@@ -193,7 +193,7 @@ int zapiszZamowienie(std::vector <int> Wynik, std::string plik_nazwa, int iterac
         cout<<"Plik do zapisu nie moze byc otwarty..."<<endl;
         return(-1);
     }
-    plikWynik << "Iteracja: " << iteracja << endl;
+    //plikWynik << "Iteracja: " << iteracja << endl;
     for (wynik:Wynik)
     {
     std::string Nazwa_sklepu;
